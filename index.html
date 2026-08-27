@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>제이메디 | 2026 카탈로그</title>
+
+  <style>
+
+    /* =========================
+       기본 설정
+    ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Noto Sans KR",
+        "Apple SD Gothic Neo",
+        sans-serif;
+
+      color: #172333;
+
+      background:
+        linear-gradient(
+          180deg,
+          #eaf7ff 0%,
+          #f7fbfe 42%,
+          #ffffff 100%
+        );
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================
+       전체 페이지
+    ========================= */
+
+    .page {
+      width: min(100%, 520px);
+      margin: 0 auto;
+
+      min-height: 100vh;
+
+      padding:
+        28px
+        20px
+        34px;
+    }
+
+
+    /* =========================
+       상단 브랜드 영역
+    ========================= */
+
+    .hero {
+      text-align: center;
+
+      padding:
+        16px
+        8px
+        30px;
+    }
+
+
+    /* 현재는 임시 J 로고
+       나중에 실제 로고 이미지로 교체 */
+
+    .logo-placeholder {
+      width: 72px;
+      height: 72px;
+
+      margin:
+        0 auto
+        18px;
+
+      border-radius: 22px;
+
+      display: grid;
+      place-items: center;
+
+      background:
+        rgba(255,255,255,.9);
+
+      border:
+        1px solid
+        rgba(64,145,190,.12);
+
+      box-shadow:
+        0 12px 30px
+        rgba(49,129,171,.10);
+
+      color: #237ca8;
+
+      font-weight: 800;
+
+      font-size: 20px;
+
+      letter-spacing: -1px;
+    }
+
+
+    .brand {
+      margin: 0;
+
+      font-size: 30px;
+
+      font-weight: 800;
+
+      letter-spacing: -1.5px;
+    }
+
+
+    .tagline {
+      margin:
+        10px
+        auto
+        0;
+
+      max-width: 320px;
+
+      color: #627383;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+      word-break: keep-all;
+    }
+
+
+    /* =========================
+       섹션
+    ========================= */
+
+    .section {
+      margin-top: 8px;
+
+      padding:
+        24px
+        0;
+    }
+
+
+    .section-title {
+      margin:
+        0
+        0
+        14px
+        2px;
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      letter-spacing: .14em;
+
+      color: #398bb5;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =========================
+       카탈로그
+    ========================= */
+
+    .catalog-card {
+      display: block;
+
+      overflow: hidden;
+
+      border-radius: 24px;
+
+      background: #ffffff;
+
+      box-shadow:
+        0 18px 45px
+        rgba(45,110,145,.14);
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+
+    .catalog-card:active {
+      transform: scale(.985);
+    }
+
+
+    .catalog-cover {
+      width: 100%;
+
+      aspect-ratio:
+        0.707 / 1;
+
+      display: grid;
+
+      place-items: center;
+
+      padding: 28px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #dff4ff,
+          #ffffff
+        );
+
+      color: #398bb5;
+
+      text-align: center;
+    }
+
+
+    .cover-inner {
+      width: 82%;
+      height: 88%;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      align-items: center;
+
+      border-radius: 12px;
+
+      background: #ffffff;
+
+      border:
+        1px solid
+        #e5eef3;
+
+      box-shadow:
+        0 10px 25px
+        rgba(47,104,132,.08);
+    }
+
+
+    .cover-small {
+      font-size: 11px;
+
+      letter-spacing: .16em;
+
+      color: #7c9aae;
+
+      margin-bottom: 12px;
+    }
+
+
+    .cover-title {
+      font-size: 28px;
+
+      font-weight: 800;
+
+      letter-spacing: -.05em;
+
+      color: #1d5e7e;
+    }
+
+
+    .cover-sub {
+      margin-top: 8px;
+
+      font-size: 13px;
+
+      color: #7890a0;
+    }
+
+
+    .catalog-note {
+      padding:
+        15px
+        18px
+        17px;
+
+      text-align: center;
+
+      font-size: 13px;
+
+      color: #6d7e8b;
+    }
+
+
+    /* =========================
+       바로가기
+    ========================= */
+
+    .quick-links {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr
+        1fr;
+
+      gap: 12px;
+    }
+
+
+    .quick-link {
+
+      min-height: 96px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      align-items: center;
+
+      gap: 8px;
+
+      border-radius: 20px;
+
+      background:
+        rgba(255,255,255,.88);
+
+      border:
+        1px solid
+        rgba(58,139,181,.10);
+
+      box-shadow:
+        0 10px 28px
+        rgba(55,119,149,.08);
+
+      transition:
+        transform .2s ease;
+    }
+
+
+    .quick-link:active {
+      transform: scale(.97);
+    }
+
+
+    .quick-icon {
+
+      font-size: 21px;
+
+      color: #3d91b9;
+    }
+
+
+    .quick-name {
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      letter-spacing: .08em;
+    }
+
+
+    .quick-desc {
+
+      font-size: 11px;
+
+      color: #8a99a4;
+    }
+
+
+    /* =========================
+       디지털 명함
+    ========================= */
+
+    .card-wrap {
+
+      padding: 18px;
+
+      border-radius: 24px;
+
+      background:
+        rgba(255,255,255,.78);
+
+      border:
+        1px solid
+        rgba(58,139,181,.09);
+
+      box-shadow:
+        0 12px 32px
+        rgba(55,119,149,.07);
+    }
+
+
+    .business-card-placeholder {
+
+      aspect-ratio:
+        1.586;
+
+      border-radius: 15px;
+
+      display: grid;
+
+      place-items: center;
+
+      text-align: center;
+
+      padding: 20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #eefaff,
+          #ffffff
+        );
+
+      border:
+        1px dashed
+        #b9dbea;
+
+      color: #7d9aaa;
+
+      font-size: 13px;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       하단
+    ========================= */
+
+    .footer {
+
+      padding:
+        28px
+        0
+        4px;
+
+      text-align: center;
+
+      color: #9aaab5;
+
+      font-size: 11px;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       PC에서 봤을 때
+    ========================= */
+
+    @media (min-width: 700px) {
+
+      body {
+        padding:
+          24px
+          0;
+      }
+
+      .page {
+
+        border-radius: 32px;
+
+        box-shadow:
+          0 20px 70px
+          rgba(43,102,133,.10);
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <main class="page">
+
+
+    <!-- =========================
+         ① 브랜드
+    ========================= -->
+
+    <header class="hero">
+
+      <!--
+        현재는 임시 J 로고입니다.
+        나중에 실제 제이메디 로고를 넣을 수 있습니다.
+      -->
+
+      <div class="logo-placeholder">
+        J
+      </div>
+
+
+      <h1 class="brand">
+        제이메디
+      </h1>
+
+
+      <p class="tagline">
+        안녕하세요! 의약품 도매상 제이메디 입니다.
+      </p>
+
+    </header>
+
+
+
+    <!-- =========================
+         ② 카탈로그
+    ========================= -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        2026 Catalog
+      </h2>
+
+
+      <!--
+        이 부분을 클릭하면
+        같은 폴더의 catalog.pdf가 열립니다.
+      -->
+
+      <a
+        class="catalog-card"
+        href="catalog.pdf"
+        aria-label="2026 제이메디 카탈로그 보기"
+      >
+
+        <div class="catalog-cover">
+
+          <div class="cover-inner">
+
+            <div class="cover-small">
+              JMEDI
+            </div>
+
+            <div class="cover-title">
+              2026<br>
+              CATALOG
+            </div>
+
+            <div class="cover-sub">
+              카탈로그를 보려면 이미지를 눌러주세요
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="catalog-note">
+
+          이미지를 클릭하면
+          카탈로그가 바로 열립니다.
+
+        </div>
+
+      </a>
+
+    </section>
+
+
+
+    <!-- =========================
+         ③ 바로가기
+    ========================= -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        Shortcut
+      </h2>
+
+
+      <div class="quick-links">
+
+
+        <!--
+          BLOG 주소를 여기에 넣으세요.
+        -->
+
+        <a
+          class="quick-link"
+          href="https://blog.naver.com/green__comma"
+          target="_blank"
+          rel="noopener"
+        >
+
+          <div class="quick-icon">
+            ✎
+          </div>
+
+          <div class="quick-name">
+            BLOG
+          </div>
+
+          <div class="quick-desc">
+            제이메디 블로그
+          </div>
+
+        </a>
+
+
+
+        <!--
+          WEBSITE 주소를 여기에 넣으세요.
+        -->
+
+        <a
+          class="quick-link"
+          href="https://greencommagift.com"
+          target="_blank"
+          rel="noopener"
+        >
+
+          <div class="quick-icon">
+            ⌂
+          </div>
+
+          <div class="quick-name">
+            WEBSITE
+          </div>
+
+          <div class="quick-desc">
+            제이메디 홈페이지
+          </div>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ④ 디지털 명함
+    ========================= -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        Digital Business Card
+      </h2>
+
+
+      <div class="card-wrap">
+
+
+        <!--
+          나중에 실제 명함 이미지를 넣을 부분입니다.
+        -->
+
+        <div class="business-card-placeholder">
+
+          여기에 제이메디
+          디지털 명함이 들어갑니다.
+
+          <br><br>
+
+          명함 이미지를 넣으면
+          실제 명함처럼 보여줄 수 있습니다.
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ⑤ 하단
+    ========================= -->
+
+    <footer class="footer">
+
+      JMEDI
+
+      <br>
+
+      © 2026 JMEDI. All rights reserved.
+
+    </footer>
+
+
+  </main>
+
+</body>
+</html>
