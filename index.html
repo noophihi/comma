@@ -1,719 +1,445 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>JMEDI</title>
+  <title>JMEDI</title>
 
-<style>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-/* =========================
-   BASIC
-========================= */
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gasoek+One&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-* {
-    box-sizing: border-box;
-}
+  <style>
 
-html {
-    scroll-behavior: smooth;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-    margin: 0;
-    background: #eaf0f7;
-    color: #111;
-    font-family:
-        "Malgun Gothic",
-        "Apple SD Gothic Neo",
-        Arial,
-        sans-serif;
-}
+    body {
+      background: #dcecff;
+      color: #111827;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
 
-.page {
-    width: 100%;
-    max-width: 760px;
-    margin: auto;
-    overflow: hidden;
-    background: #eaf0f7;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-
-/* =========================
-   INTRO
-========================= */
-
-.intro {
-    min-height: 720px;
-    position: relative;
-    padding: 28px 28px 55px;
-    background: #a9c7e8;
-    overflow: hidden;
-}
-
-/* 작은 상단 정보 */
-
-.top-line {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-}
-
-.top-line .mark {
-    font-size: 14px;
-}
-
-.top-line .year {
-    font-size: 12px;
-}
-
-
-/* 큰 JMEDI */
-
-.brand-big {
-    position: absolute;
-    left: -18px;
-    top: 105px;
-
-    font-family:
-        "Arial Black",
-        "Malgun Gothic",
-        sans-serif;
-
-    font-size: clamp(100px, 24vw, 210px);
-    line-height: .8;
-    letter-spacing: -13px;
-
-    font-weight: 900;
-
-    color: #14233a;
-
-    transform: rotate(-2deg);
-}
-
-
-/* 컬러 포인트 */
-
-.brand-big span {
-    color: #5e8fd5;
-}
-
-
-/* 인사말 */
-
-.intro-copy {
-    position: absolute;
-    left: 30px;
-    bottom: 105px;
-    z-index: 2;
-}
-
-.intro-copy .small {
-    font-size: 14px;
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-
-.intro-copy h1 {
-    margin: 0;
-
-    font-size: clamp(34px, 8vw, 64px);
-    line-height: 1;
-    letter-spacing: -4px;
-
-    font-weight: 900;
-}
-
-.intro-copy h1 em {
-    font-style: normal;
-    color: white;
-}
-
-
-/* 손글씨 느낌의 그래픽 */
-
-.hand-note {
-    position: absolute;
-    right: 25px;
-    bottom: 42px;
-
-    font-family: cursive;
-    font-size: 22px;
-    font-weight: 900;
-
-    transform: rotate(-7deg);
-}
-
-
-/* 선 */
-
-.intro-line {
-    position: absolute;
-    left: 30px;
-    right: 30px;
-    bottom: 75px;
-
-    height: 2px;
-    background: #14233a;
-}
-
-
-/* =========================
-   CATALOG
-========================= */
-
-.catalog {
-    position: relative;
-    padding: 85px 30px 100px;
-    background: #f4f6f8;
-}
-
-
-/* 거대한 제목 */
-
-.catalog-title {
-    position: relative;
-    margin: 0;
-
-    font-family:
-        "Arial Black",
-        "Malgun Gothic",
-        sans-serif;
-
-    font-size: clamp(65px, 18vw, 145px);
-    line-height: .8;
-
-    letter-spacing: -7px;
-    font-weight: 900;
-
-    color: #14233a;
-}
-
-.catalog-title span {
-    color: #5e8fd5;
-}
-
-
-/* 작은 설명 */
-
-.catalog-sub {
-    margin-top: 22px;
-
-    font-size: 14px;
-    line-height: 1.6;
-    font-weight: 700;
-
-    letter-spacing: -0.5px;
-}
-
-
-/* 카탈로그 이미지 영역 */
-
-.catalog-image-wrap {
-    margin-top: 45px;
-
-    display: flex;
-    justify-content: center;
-
-    position: relative;
-}
-
-
-/* 실제 클릭 영역 */
-
-.catalog-link {
-    display: block;
-
-    width: 48%;
-    max-width: 320px;
-
-    position: relative;
-
-    transform: rotate(2deg);
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease;
-}
-
-.catalog-link:hover {
-    transform: rotate(0deg) translateY(-5px);
-}
-
-
-/* 카탈로그 */
-
-.catalog-link img {
-    display: block;
-    width: 100%;
-    height: auto;
-
-    box-shadow:
-        12px 14px 0 #a9c7e8,
-        0 10px 35px rgba(0,0,0,.15);
-}
-
-
-/* 클릭 표시 */
-
-.catalog-click {
-    position: absolute;
-
-    right: -35px;
-    bottom: -20px;
-
-    width: 75px;
-    height: 75px;
-
-    border: 2px solid #14233a;
-    border-radius: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: #f4f6f8;
-
-    font-size: 11px;
-    font-weight: 900;
-
-    text-align: center;
-
-    transform: rotate(-10deg);
-}
-
-
-/* =========================
-   MIDDLE GRAPHIC
-========================= */
-
-.statement {
-    position: relative;
-
-    min-height: 500px;
-
-    padding: 70px 30px;
-
-    background: #d5e3f3;
-
-    overflow: hidden;
-}
-
-
-/* 큰 글씨 */
-
-.statement-main {
-    margin: 0;
-
-    font-family:
-        "Arial Black",
-        "Malgun Gothic",
-        sans-serif;
-
-    font-size: clamp(50px, 13vw, 100px);
-
-    line-height: .88;
-    letter-spacing: -5px;
-
-    color: #14233a;
-}
-
-
-/* 기울어진 글씨 */
-
-.statement-main .tilt {
-    display: inline-block;
-
-    color: #5e8fd5;
-
-    transform: rotate(-5deg);
-}
-
-
-/* 손글씨 */
-
-.doodle-text {
-    position: absolute;
-
-    right: 35px;
-    top: 115px;
-
-    font-family: cursive;
-
-    font-size: 25px;
-    font-weight: bold;
-
-    transform: rotate(8deg);
-}
-
-
-/* 동그라미 */
-
-.circle {
-    position: absolute;
-
-    right: -60px;
-    bottom: -80px;
-
-    width: 250px;
-    height: 250px;
-
-    border: 3px solid #5e8fd5;
-    border-radius: 50%;
-}
-
-
-/* 작은 문장 */
-
-.statement-copy {
-    position: absolute;
-
-    left: 30px;
-    bottom: 65px;
-
-    max-width: 320px;
-
-    font-size: 13px;
-    line-height: 1.7;
-
-    font-weight: 700;
-}
-
-
-/* =========================
-   LINKS
-========================= */
-
-.links {
-    position: relative;
-
-    padding: 90px 30px 100px;
-
-    background: #ffffff;
-}
-
-
-/* 제목 */
-
-.links-title {
-    margin: 0;
-
-    font-family:
-        "Arial Black",
-        "Malgun Gothic",
-        sans-serif;
-
-    font-size: clamp(50px, 13vw, 100px);
-
-    line-height: .85;
-
-    letter-spacing: -5px;
-
-    color: #14233a;
-}
-
-.links-title span {
-    color: #5e8fd5;
-}
-
-
-/* 링크 */
-
-.link-list {
-    margin-top: 65px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-
-.link-item {
-    position: relative;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 22px 5px;
-
-    border-top: 2px solid #14233a;
-
-    color: #14233a;
-
-    text-decoration: none;
-
-    transition: padding .2s ease;
-}
-
-.link-item:last-child {
-    border-bottom: 2px solid #14233a;
-}
-
-.link-item:hover {
-    padding-left: 14px;
-}
-
-
-.link-number {
-    font-family: cursive;
-
-    font-size: 18px;
-
-    transform: rotate(-5deg);
-}
-
-
-.link-name {
-    font-family:
-        "Arial Black",
-        "Malgun Gothic",
-        sans-serif;
-
-    font-size: clamp(28px, 7vw, 50px);
-
-    letter-spacing: -2px;
-
-    font-weight: 900;
-}
-
-
-.link-arrow {
-    font-size: 25px;
-}
-
-
-/* =========================
-   DIGITAL BUSINESS CARD
-========================= */
-
-.contact {
-    position: relative;
-
-    padding: 80px 30px 50px;
-
-    background: #14233a;
-
-    color: white;
-
-    overflow: hidden;
-}
-
-
-/* 명함 제목 */
-
-.contact-title {
-    margin: 0;
-
-    font-family:
-        "Arial Black",
-        "Malgun Gothic",
-        sans-serif;
-
-    font-size: clamp(48px, 12vw, 95px);
-
-    line-height: .85;
-
-    letter-spacing: -5px;
-}
-
-.contact-title span {
-    color: #a9c7e8;
-}
-
-
-/* 명함 */
-
-.card {
-    position: relative;
-
-    margin-top: 65px;
-
-    padding: 30px;
-
-    background: #eaf0f7;
-
-    color: #14233a;
-
-    min-height: 320px;
-
-    transform: rotate(-1.5deg);
-
-    box-shadow:
-        15px 15px 0 #5e8fd5;
-}
-
-
-/* 카드 상단 */
-
-.card-top {
-    display: flex;
-    justify-content: space-between;
-
-    font-size: 12px;
-    font-weight: 900;
-}
-
-
-/* 회사 */
-
-.card-brand {
-    margin-top: 45px;
-
-    font-family:
-        "Arial Black",
-        "Malgun Gothic",
-        sans-serif;
-
-    font-size: clamp(45px, 11vw, 80px);
-
-    letter-spacing: -5px;
-
-    line-height: .8;
-}
-
-
-/* 정보 */
-
-.card-info {
-    margin-top: 55px;
-
-    display: grid;
-
-    gap: 9px;
-
-    font-size: 13px;
-
-    font-weight: 700;
-}
-
-
-/* 전화 */
-
-.phone {
-    font-size: 19px;
-    font-weight: 900;
-}
-
-
-/* 이메일 */
-
-.email {
-    font-size: 13px;
-}
-
-
-/* 하단 */
-
-.footer {
-    margin-top: 55px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-
-    font-size: 11px;
-    line-height: 1.5;
-}
-
-.footer-big {
-    font-family: cursive;
-
-    font-size: 27px;
-
-    transform: rotate(-4deg);
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 500px) {
-
+    /* 전체 모바일 페이지 */
     .page {
-        max-width: 100%;
+      width: 100%;
+      max-width: 430px;
+      margin: 0 auto;
+      background: #ffffff;
+      overflow: hidden;
+      min-height: 100vh;
     }
 
-    .intro {
-        min-height: 650px;
+    /* =========================
+       TOP
+    ========================= */
+
+    .top {
+      position: relative;
+      background: #a9c8ed;
+      min-height: 310px;
+      padding: 22px 20px 25px;
+      overflow: hidden;
     }
 
-    .brand-big {
-        top: 130px;
-        left: -8px;
-        letter-spacing: -8px;
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+
+    .logo {
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: -0.8px;
+    }
+
+    .menu {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .brand-small {
+      margin-top: 60px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .hello {
+      margin-top: 8px;
+      font-family: 'Gasoek One', sans-serif;
+      font-size: 42px;
+      line-height: 0.95;
+      letter-spacing: -2px;
+    }
+
+    .brand-name {
+      margin-top: 15px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .top-number {
+      position: absolute;
+      right: -8px;
+      bottom: -24px;
+      font-family: 'Gasoek One', sans-serif;
+      font-size: 145px;
+      line-height: 1;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: -10px;
+    }
+
+
+    /* =========================
+       CATALOG
+    ========================= */
 
     .catalog {
-        padding-top: 65px;
+      padding: 55px 20px 70px;
+      background: #fff;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.8px;
+      margin-bottom: 7px;
+    }
+
+    .catalog-title {
+      font-family: 'Gasoek One', sans-serif;
+      font-size: 57px;
+      line-height: 0.9;
+      letter-spacing: -2px;
+      color: #172b52;
+    }
+
+    .catalog-sub {
+      margin-top: 15px;
+      font-size: 11px;
+      line-height: 1.6;
+      color: #555;
     }
 
     .catalog-link {
-        width: 55%;
+      display: block;
+      margin-top: 32px;
+      width: 72%;
+      margin-left: auto;
+      margin-right: auto;
+      transition: transform 0.25s ease;
     }
 
-    .statement {
-        min-height: 470px;
+    .catalog-link:hover {
+      transform: translateY(-5px);
     }
+
+    /*
+      현재 catalog-cover.jpg를 넣으면
+      카탈로그 첫 페이지 이미지가 들어가는 자리
+    */
+
+    .catalog-cover {
+      width: 100%;
+      display: block;
+      box-shadow: 10px 12px 0 #d6e4f6;
+    }
+
+    .catalog-placeholder {
+      width: 100%;
+      aspect-ratio: 0.707;
+      background: #b8d0ed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 10px 12px 0 #d6e4f6;
+    }
+
+    .catalog-placeholder span {
+      font-family: 'Gasoek One', sans-serif;
+      font-size: 32px;
+      color: #172b52;
+    }
+
+    .catalog-caption {
+      margin-top: 14px;
+      font-size: 10px;
+      color: #777;
+      text-align: center;
+    }
+
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      background: #172b52;
+      color: white;
+      padding: 60px 20px 65px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .intro-small {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+    }
+
+    .intro-title {
+      margin-top: 30px;
+      font-family: 'Gasoek One', sans-serif;
+      font-size: 54px;
+      line-height: 0.95;
+      letter-spacing: -2px;
+    }
+
+    .intro-hand {
+      margin-top: 18px;
+      font-family: 'Gaegu', cursive;
+      font-size: 28px;
+      font-weight: 700;
+      transform: rotate(-3deg);
+    }
+
+    .intro-text {
+      margin-top: 30px;
+      max-width: 290px;
+      font-size: 12px;
+      line-height: 1.8;
+      color: #dcecff;
+    }
+
+    .intro-circle {
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: #8bb6e7;
+      right: -65px;
+      bottom: -55px;
+    }
+
+
+    /* =========================
+       LINKS
+    ========================= */
 
     .links {
-        padding-top: 70px;
+      padding: 65px 20px;
+      background: #f5f9ff;
     }
 
-    .contact {
-        padding-top: 65px;
+    .links-title {
+      font-family: 'Gasoek One', sans-serif;
+      font-size: 43px;
+      line-height: 1;
+      color: #172b52;
     }
 
-}
+    .links-sub {
+      margin-top: 10px;
+      font-family: 'Gaegu', cursive;
+      font-size: 21px;
+      font-weight: 700;
+    }
 
-</style>
+    .link-list {
+      margin-top: 40px;
+    }
+
+    .link-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 20px 0;
+      border-bottom: 1px solid #c8d6e8;
+      transition: padding 0.2s ease;
+    }
+
+    .link-item:hover {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    .link-name {
+      font-family: 'Gasoek One', sans-serif;
+      font-size: 30px;
+      color: #172b52;
+    }
+
+    .link-description {
+      margin-top: 5px;
+      font-size: 10px;
+      color: #777;
+    }
+
+    .link-arrow {
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       BUSINESS CARD
+    ========================= */
+
+    .business {
+      padding: 65px 20px 80px;
+      background: #dcecff;
+    }
+
+    .business-label {
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+    }
+
+    .business-title {
+      margin-top: 10px;
+      font-family: 'Gasoek One', sans-serif;
+      font-size: 46px;
+      line-height: 0.95;
+      color: #172b52;
+    }
+
+    .business-hand {
+      margin-top: 8px;
+      font-family: 'Gaegu', cursive;
+      font-size: 23px;
+      font-weight: 700;
+    }
+
+    /* 디지털 명함 */
+    .card {
+      margin-top: 35px;
+      background: white;
+      padding: 25px;
+      min-height: 210px;
+      box-shadow: 12px 12px 0 #9dbce0;
+      position: relative;
+    }
+
+    .card-logo {
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .card-company {
+      margin-top: 55px;
+      font-family: 'Gasoek One', sans-serif;
+      font-size: 28px;
+      color: #172b52;
+    }
+
+    .card-info {
+      margin-top: 8px;
+      font-size: 10px;
+      line-height: 1.8;
+      color: #666;
+    }
+
+    .card-mark {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-family: 'Gasoek One', sans-serif;
+      font-size: 32px;
+      color: #a9c8ed;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 25px 20px 30px;
+      background: #172b52;
+      color: white;
+      font-size: 9px;
+      line-height: 1.7;
+    }
+
+    .footer-brand {
+      font-weight: 900;
+      font-size: 12px;
+    }
+
+    .footer-copy {
+      margin-top: 8px;
+      color: #b9c8dd;
+    }
+
+
+    /* =========================
+       PC
+    ========================= */
+
+    @media (min-width: 600px) {
+
+      body {
+        padding: 30px 0;
+      }
+
+      .page {
+        box-shadow: 0 20px 60px rgba(30,60,100,0.15);
+      }
+
+    }
+
+  </style>
 </head>
 
 
 <body>
 
-<div class="page">
+  <main class="page">
 
 
     <!-- =====================
-         INTRO
+         TOP
     ====================== -->
 
-    <section class="intro">
+    <section class="top">
 
-        <div class="top-line">
-            <div class="mark">JMEDI</div>
-            <div class="year">SINCE 1985</div>
-        </div>
+      <div class="top-header">
+        <div class="logo">JMEDI</div>
+        <div class="menu">↗</div>
+      </div>
 
-        <div class="brand-big">
-            J<span>MEDI</span>
-        </div>
+      <div class="brand-small">
+        JMEDI
+      </div>
 
-        <div class="intro-line"></div>
+      <div class="hello">
+        안녕하세요!
+      </div>
 
-        <div class="intro-copy">
+      <div class="brand-name">
+        의약품 도매상 제이메디 입니다.
+      </div>
 
-            <div class="small">
-                PHARMACEUTICAL WHOLESALER
-            </div>
-
-            <h1>
-                안녕하세요!<br>
-                <em>의약품 도매상</em><br>
-                제이메디 입니다.
-            </h1>
-
-        </div>
-
-        <div class="hand-note">
-            healthcare, simply.
-        </div>
+      <div class="top-number">
+        01
+      </div>
 
     </section>
 
@@ -725,75 +451,81 @@ body {
 
     <section class="catalog">
 
-        <h2 class="catalog-title">
-            CATA<span>LOG</span>
-        </h2>
+      <div class="section-label">
+        JMEDI / 2026
+      </div>
 
-        <div class="catalog-sub">
-            2026 제이메디 카달로그 입니다.
+      <div class="catalog-title">
+        CATALOG
+      </div>
+
+      <div class="catalog-sub">
+        2026 제이메디 카달로그 입니다.
+      </div>
+
+
+      <!-- 카탈로그 클릭 영역 -->
+
+      <a
+        class="catalog-link"
+        href="catalog.pdf"
+        target="_blank"
+      >
+
+        <!--
+        실제 카탈로그 표지 이미지를 넣을 경우:
+
+        <img
+          src="catalog-cover.jpg"
+          class="catalog-cover"
+          alt="2026 제이메디 카탈로그"
+        >
+
+        -->
+
+        <div class="catalog-placeholder">
+          <span>
+            JMEDI<br>
+            CATALOG
+          </span>
         </div>
 
-
-        <div class="catalog-image-wrap">
-
-            <!-- catalog.pdf를 클릭하면 열림 -->
-
-            <a
-                href="catalog.pdf"
-                target="_blank"
-                class="catalog-link"
-            >
-
-                <!--
-                    현재 catalog.pdf 첫 페이지를
-                    자동으로 이미지처럼 보여줄 수는 없음.
-
-                    아래 이미지 자리에
-                    카탈로그 표지 JPG/PNG를 넣어주세요.
-                -->
-
-                <img
-                    src="catalog-cover.jpg"
-                    alt="2026 제이메디 카탈로그"
-                >
-
-                <div class="catalog-click">
-                    CLICK<br>
-                    CATALOG
-                </div>
-
-            </a>
-
+        <div class="catalog-caption">
+          TAP TO VIEW CATALOG ↗
         </div>
+
+      </a>
 
     </section>
 
 
 
     <!-- =====================
-         STATEMENT
+         INTRO
     ====================== -->
 
-    <section class="statement">
+    <section class="intro">
 
-        <h2 class="statement-main">
-            GOOD<br>
-            <span class="tilt">HEALTH</span><br>
-            STARTS<br>
-            HERE.
-        </h2>
+      <div class="intro-small">
+        ABOUT JMEDI
+      </div>
 
-        <div class="doodle-text">
-            JMEDI :)
-        </div>
+      <div class="intro-title">
+        MEDICAL<br>
+        SUPPLY
+      </div>
 
-        <div class="circle"></div>
+      <div class="intro-hand">
+        함께하는 건강한 일상
+      </div>
 
-        <div class="statement-copy">
-            필요한 의약품과 건강 관련 제품을
-            보다 편리하게 만나볼 수 있도록
-            제이메디가 함께합니다.
-        </div>
+      <p class="intro-text">
+        제이메디는 의약품 및 다양한 헬스케어 제품을
+        보다 편리하게 만나볼 수 있도록
+        고객과 함께하고 있습니다.
+      </p>
+
+      <div class="intro-circle"></div>
 
     </section>
 
@@ -805,113 +537,140 @@ body {
 
     <section class="links">
 
-        <h2 class="links-title">
-            FIND<br>
-            <span>JMEDI.</span>
-        </h2>
+      <div class="section-label">
+        ONLINE
+      </div>
+
+      <div class="links-title">
+        FIND US
+      </div>
+
+      <div class="links-sub">
+        제이메디의 다양한 소식을 만나보세요.
+      </div>
 
 
-        <div class="link-list">
+      <div class="link-list">
 
-            <a
-                class="link-item"
-                href="https://blog.naver.com/green__comma"
-                target="_blank"
-            >
+        <!-- 블로그 -->
 
-                <span class="link-number">01</span>
+        <a
+          href="#"
+          class="link-item"
+          target="_blank"
+        >
 
-                <span class="link-name">
-                    BLOG
-                </span>
+          <div>
+            <div class="link-name">
+              BLOG
+            </div>
 
-                <span class="link-arrow">
-                    ↗
-                </span>
+            <div class="link-description">
+              제이메디 블로그
+            </div>
+          </div>
 
-            </a>
+          <div class="link-arrow">
+            ↗
+          </div>
+
+        </a>
 
 
-            <a
-                class="link-item"
-                href="#"
-                target="_blank"
-            >
+        <!-- 사이트 -->
 
-                <span class="link-number">02</span>
+        <a
+          href="#"
+          class="link-item"
+          target="_blank"
+        >
 
-                <span class="link-name">
-                    WEBSITE
-                </span>
+          <div>
+            <div class="link-name">
+              WEBSITE
+            </div>
 
-                <span class="link-arrow">
-                    ↗
-                </span>
+            <div class="link-description">
+              제이메디 공식 사이트
+            </div>
+          </div>
 
-            </a>
+          <div class="link-arrow">
+            ↗
+          </div>
 
-        </div>
+        </a>
+
+      </div>
 
     </section>
 
 
 
     <!-- =====================
-         CONTACT
+         DIGITAL BUSINESS CARD
     ====================== -->
 
-    <section class="contact">
+    <section class="business">
 
-        <h2 class="contact-title">
-            LET'S<br>
-            <span>TALK.</span>
-        </h2>
+      <div class="business-label">
+        CONTACT
+      </div>
 
+      <div class="business-title">
+        MY<br>
+        CARD
+      </div>
 
-        <div class="card">
-
-            <div class="card-top">
-                <span>JMEDI</span>
-                <span>PHARMACEUTICAL</span>
-            </div>
-
-
-            <div class="card-brand">
-                JMEDI
-            </div>
+      <div class="business-hand">
+        제이메디 디지털 명함
+      </div>
 
 
-            <div class="card-info">
+      <div class="card">
 
-                <div class="phone">
-                    010.5909.8573
-                </div>
-
-                <div class="email">
-                    greencomma77@naver.com
-                </div>
-
-            </div>
-
-
-            <div class="footer">
-
-                <div>
-                    의약품 도매상 제이메디
-                </div>
-
-                <div class="footer-big">
-                    contact.
-                </div>
-
-            </div>
-
+        <div class="card-logo">
+          JMEDI
         </div>
+
+        <div class="card-mark">
+          J
+        </div>
+
+        <div class="card-company">
+          제이메디
+        </div>
+
+        <div class="card-info">
+          의약품 도매상<br>
+          TEL. 010-0000-0000<br>
+          E-mail. example@email.com
+        </div>
+
+      </div>
 
     </section>
 
 
-</div>
+
+    <!-- =====================
+         FOOTER
+    ====================== -->
+
+    <footer>
+
+      <div class="footer-brand">
+        JMEDI
+      </div>
+
+      <div class="footer-copy">
+        © 2026 JMEDI. ALL RIGHTS RESERVED.
+      </div>
+
+    </footer>
+
+
+  </main>
 
 </body>
 </html>
