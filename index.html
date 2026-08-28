@@ -1,676 +1,411 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>JMEDI</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gasoek+One&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background: #dcecff;
-      color: #111827;
-      font-family: 'Noto Sans KR', sans-serif;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* 전체 모바일 페이지 */
-    .page {
-      width: 100%;
-      max-width: 430px;
-      margin: 0 auto;
-      background: #ffffff;
-      overflow: hidden;
-      min-height: 100vh;
-    }
-
-    /* =========================
-       TOP
-    ========================= */
-
-    .top {
-      position: relative;
-      background: #a9c8ed;
-      min-height: 310px;
-      padding: 22px 20px 25px;
-      overflow: hidden;
-    }
-
-    .top-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 15px;
-      font-weight: 900;
-      letter-spacing: -0.8px;
-    }
-
-    .menu {
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .brand-small {
-      margin-top: 60px;
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 1px;
-    }
-
-    .hello {
-      margin-top: 8px;
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 42px;
-      line-height: 0.95;
-      letter-spacing: -2px;
-    }
-
-    .brand-name {
-      margin-top: 15px;
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 1.6;
-    }
-
-    .top-number {
-      position: absolute;
-      right: -8px;
-      bottom: -24px;
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 145px;
-      line-height: 1;
-      color: rgba(255,255,255,0.35);
-      letter-spacing: -10px;
-    }
-
-
-    /* =========================
-       CATALOG
-    ========================= */
-
-    .catalog {
-      padding: 55px 20px 70px;
-      background: #fff;
-    }
-
-    .section-label {
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 1.8px;
-      margin-bottom: 7px;
-    }
-
-    .catalog-title {
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 57px;
-      line-height: 0.9;
-      letter-spacing: -2px;
-      color: #172b52;
-    }
-
-    .catalog-sub {
-      margin-top: 15px;
-      font-size: 11px;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .catalog-link {
-      display: block;
-      margin-top: 32px;
-      width: 72%;
-      margin-left: auto;
-      margin-right: auto;
-      transition: transform 0.25s ease;
-    }
-
-    .catalog-link:hover {
-      transform: translateY(-5px);
-    }
-
-    /*
-      현재 catalog-cover.jpg를 넣으면
-      카탈로그 첫 페이지 이미지가 들어가는 자리
-    */
-
-    .catalog-cover {
-      width: 100%;
-      display: block;
-      box-shadow: 10px 12px 0 #d6e4f6;
-    }
-
-    .catalog-placeholder {
-      width: 100%;
-      aspect-ratio: 0.707;
-      background: #b8d0ed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-      box-shadow: 10px 12px 0 #d6e4f6;
-    }
-
-    .catalog-placeholder span {
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 32px;
-      color: #172b52;
-    }
-
-    .catalog-caption {
-      margin-top: 14px;
-      font-size: 10px;
-      color: #777;
-      text-align: center;
-    }
-
-
-    /* =========================
-       INTRO
-    ========================= */
-
-    .intro {
-      background: #172b52;
-      color: white;
-      padding: 60px 20px 65px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .intro-small {
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      font-weight: 700;
-    }
-
-    .intro-title {
-      margin-top: 30px;
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 54px;
-      line-height: 0.95;
-      letter-spacing: -2px;
-    }
-
-    .intro-hand {
-      margin-top: 18px;
-      font-family: 'Gaegu', cursive;
-      font-size: 28px;
-      font-weight: 700;
-      transform: rotate(-3deg);
-    }
-
-    .intro-text {
-      margin-top: 30px;
-      max-width: 290px;
-      font-size: 12px;
-      line-height: 1.8;
-      color: #dcecff;
-    }
-
-    .intro-circle {
-      position: absolute;
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      background: #8bb6e7;
-      right: -65px;
-      bottom: -55px;
-    }
-
-
-    /* =========================
-       LINKS
-    ========================= */
-
-    .links {
-      padding: 65px 20px;
-      background: #f5f9ff;
-    }
-
-    .links-title {
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 43px;
-      line-height: 1;
-      color: #172b52;
-    }
-
-    .links-sub {
-      margin-top: 10px;
-      font-family: 'Gaegu', cursive;
-      font-size: 21px;
-      font-weight: 700;
-    }
-
-    .link-list {
-      margin-top: 40px;
-    }
-
-    .link-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      padding: 20px 0;
-      border-bottom: 1px solid #c8d6e8;
-      transition: padding 0.2s ease;
-    }
-
-    .link-item:hover {
-      padding-left: 8px;
-      padding-right: 8px;
-    }
-
-    .link-name {
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 30px;
-      color: #172b52;
-    }
-
-    .link-description {
-      margin-top: 5px;
-      font-size: 10px;
-      color: #777;
-    }
-
-    .link-arrow {
-      font-size: 25px;
-      font-weight: 700;
-    }
-
-
-    /* =========================
-       BUSINESS CARD
-    ========================= */
-
-    .business {
-      padding: 65px 20px 80px;
-      background: #dcecff;
-    }
-
-    .business-label {
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 1.5px;
-    }
-
-    .business-title {
-      margin-top: 10px;
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 46px;
-      line-height: 0.95;
-      color: #172b52;
-    }
-
-    .business-hand {
-      margin-top: 8px;
-      font-family: 'Gaegu', cursive;
-      font-size: 23px;
-      font-weight: 700;
-    }
-
-    /* 디지털 명함 */
-    .card {
-      margin-top: 35px;
-      background: white;
-      padding: 25px;
-      min-height: 210px;
-      box-shadow: 12px 12px 0 #9dbce0;
-      position: relative;
-    }
-
-    .card-logo {
-      font-size: 15px;
-      font-weight: 900;
-    }
-
-    .card-company {
-      margin-top: 55px;
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 28px;
-      color: #172b52;
-    }
-
-    .card-info {
-      margin-top: 8px;
-      font-size: 10px;
-      line-height: 1.8;
-      color: #666;
-    }
-
-    .card-mark {
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 32px;
-      color: #a9c8ed;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      padding: 25px 20px 30px;
-      background: #172b52;
-      color: white;
-      font-size: 9px;
-      line-height: 1.7;
-    }
-
-    .footer-brand {
-      font-weight: 900;
-      font-size: 12px;
-    }
-
-    .footer-copy {
-      margin-top: 8px;
-      color: #b9c8dd;
-    }
-
-
-    /* =========================
-       PC
-    ========================= */
-
-    @media (min-width: 600px) {
-
-      body {
-        padding: 30px 0;
-      }
-
-      .page {
-        box-shadow: 0 20px 60px rgba(30,60,100,0.15);
-      }
-
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JMEDI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #e8f1fb;
+    color: #17243a;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+.page {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    background: #f9fbff;
+    overflow: hidden;
+}
+
+/* --------------------
+   TOP
+-------------------- */
+
+.hero {
+    min-height: 360px;
+    background: #a9c8ed;
+    padding: 26px 22px 35px;
+    position: relative;
+    overflow: hidden;
+}
+
+.top-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.logo {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 27px;
+    letter-spacing: -2px;
+}
+
+.number {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.hero-title {
+    margin-top: 75px;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 65px;
+    line-height: .85;
+    letter-spacing: -4px;
+}
+
+.hero-title .outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px #17243a;
+}
+
+.intro {
+    position: absolute;
+    bottom: 28px;
+    left: 23px;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* --------------------
+   CATALOG
+-------------------- */
+
+.catalog {
+    padding: 55px 22px 70px;
+    position: relative;
+}
+
+.section-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.catalog-title {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 64px;
+    letter-spacing: -3px;
+    line-height: .9;
+}
+
+.catalog-title span {
+    color: transparent;
+    -webkit-text-stroke: 1.5px #4d8ed9;
+}
+
+.catalog-sub {
+    margin-top: 17px;
+    font-size: 12px;
+}
+
+.catalog-wrap {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.catalog-card {
+    width: 67%;
+    padding: 9px;
+    background: white;
+    box-shadow: 12px 14px 0 #9fc2ea;
+    transform: rotate(-2deg);
+    cursor: pointer;
+}
+
+.catalog-card img {
+    width: 100%;
+    display: block;
+}
+
+/* 작은 장식 */
+
+.catalog-note {
+    position: absolute;
+    right: 8px;
+    bottom: 5px;
+    font-family: 'Gaegu', cursive;
+    font-size: 22px;
+    transform: rotate(8deg);
+}
+
+/* --------------------
+   LINKS
+-------------------- */
+
+.links {
+    background: #d4e7f9;
+    padding: 55px 22px 65px;
+}
+
+.links-title {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 43px;
+    letter-spacing: -2px;
+}
+
+.links-title span {
+    color: transparent;
+    -webkit-text-stroke: 1px #17243a;
+}
+
+.link-list {
+    margin-top: 35px;
+}
+
+.link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 21px 3px;
+
+    border-top: 1px solid #6e91b7;
+
+    text-decoration: none;
+    color: #17243a;
+}
+
+.link-item:last-child {
+    border-bottom: 1px solid #6e91b7;
+}
+
+.link-name {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 27px;
+}
+
+.link-desc {
+    font-size: 10px;
+}
+
+.arrow {
+    font-size: 24px;
+}
+
+/* --------------------
+   BUSINESS CARD
+-------------------- */
+
+.card-section {
+    background: #f9fbff;
+    padding: 65px 22px 80px;
+    position: relative;
+}
+
+.card-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.card-title {
+    margin-top: 8px;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 45px;
+    letter-spacing: -2px;
+}
+
+.business-card {
+    margin-top: 30px;
+    min-height: 210px;
+    background: #a9c8ed;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.business-card::after {
+    content: "JMEDI";
+    position: absolute;
+    right: -25px;
+    bottom: -35px;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 95px;
+    color: rgba(255,255,255,.28);
+}
+
+.business-card h3 {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 28px;
+}
+
+.business-card p {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* --------------------
+   FOOTER
+-------------------- */
+
+.footer {
+    background: #17243a;
+    color: white;
+    padding: 35px 22px;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.footer strong {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 20px;
+}
+
+</style>
 </head>
 
 
 <body>
 
-  <main class="page">
+<div class="page">
 
+    <!-- TOP -->
 
-    <!-- =====================
-         TOP
-    ====================== -->
+    <section class="hero">
 
-    <section class="top">
+        <div class="top-line">
+            <div class="logo">JMEDI</div>
+            <div class="number">SINCE 1985</div>
+        </div>
 
-      <div class="top-header">
-        <div class="logo">JMEDI</div>
-        <div class="menu">↗</div>
-      </div>
+        <div class="hero-title">
+            J<span class="outline">MEDI</span>
+        </div>
 
-      <div class="brand-small">
-        JMEDI
-      </div>
-
-      <div class="hello">
-        안녕하세요!
-      </div>
-
-      <div class="brand-name">
-        의약품 도매상 제이메디 입니다.
-      </div>
-
-      <div class="top-number">
-        01
-      </div>
+        <div class="intro">
+            안녕하세요!<br>
+            의약품 도매상 <strong>제이메디</strong> 입니다.
+        </div>
 
     </section>
 
 
-
-    <!-- =====================
-         CATALOG
-    ====================== -->
+    <!-- CATALOG -->
 
     <section class="catalog">
 
-      <div class="section-label">
-        JMEDI / 2026
-      </div>
-
-      <div class="catalog-title">
-        CATALOG
-      </div>
-
-      <div class="catalog-sub">
-        2026 제이메디 카달로그 입니다.
-      </div>
-
-
-      <!-- 카탈로그 클릭 영역 -->
-
-      <a
-        class="catalog-link"
-        href="catalog.pdf"
-        target="_blank"
-      >
-
-        <!--
-        실제 카탈로그 표지 이미지를 넣을 경우:
-
-        <img
-          src="catalog-cover.jpg"
-          class="catalog-cover"
-          alt="2026 제이메디 카탈로그"
-        >
-
-        -->
-
-        <div class="catalog-placeholder">
-          <span>
-            JMEDI<br>
-            CATALOG
-          </span>
+        <div class="section-label">
+            JMEDI / 2026
         </div>
 
-        <div class="catalog-caption">
-          TAP TO VIEW CATALOG ↗
+        <div class="catalog-title">
+            CATA<span>LOG</span>
         </div>
 
-      </a>
+        <div class="catalog-sub">
+            2026 제이메디 카달로그 입니다.
+        </div>
+
+        <div class="catalog-wrap">
+
+            <a href="catalog.pdf" class="catalog-card">
+                <img src="catalog.pdf" alt="2026 제이메디 카달로그">
+            </a>
+
+            <div class="catalog-note">
+                CLICK →
+            </div>
+
+        </div>
 
     </section>
 
 
-
-    <!-- =====================
-         INTRO
-    ====================== -->
-
-    <section class="intro">
-
-      <div class="intro-small">
-        ABOUT JMEDI
-      </div>
-
-      <div class="intro-title">
-        MEDICAL<br>
-        SUPPLY
-      </div>
-
-      <div class="intro-hand">
-        함께하는 건강한 일상
-      </div>
-
-      <p class="intro-text">
-        제이메디는 의약품 및 다양한 헬스케어 제품을
-        보다 편리하게 만나볼 수 있도록
-        고객과 함께하고 있습니다.
-      </p>
-
-      <div class="intro-circle"></div>
-
-    </section>
-
-
-
-    <!-- =====================
-         LINKS
-    ====================== -->
+    <!-- LINKS -->
 
     <section class="links">
 
-      <div class="section-label">
-        ONLINE
-      </div>
+        <div class="links-title">
+            GO <span>TO</span>
+        </div>
 
-      <div class="links-title">
-        FIND US
-      </div>
+        <div class="link-list">
 
-      <div class="links-sub">
-        제이메디의 다양한 소식을 만나보세요.
-      </div>
+            <a href="https://blog.naver.com/green__comma"
+               class="link-item">
 
+                <div>
+                    <div class="link-name">BLOG</div>
+                    <div class="link-desc">제이메디 블로그 바로가기</div>
+                </div>
 
-      <div class="link-list">
+                <div class="arrow">↗</div>
 
-        <!-- 블로그 -->
-
-        <a
-          href="#"
-          class="link-item"
-          target="_blank"
-        >
-
-          <div>
-            <div class="link-name">
-              BLOG
-            </div>
-
-            <div class="link-description">
-              제이메디 블로그
-            </div>
-          </div>
-
-          <div class="link-arrow">
-            ↗
-          </div>
-
-        </a>
+            </a>
 
 
-        <!-- 사이트 -->
+            <a href="#" class="link-item">
 
-        <a
-          href="#"
-          class="link-item"
-          target="_blank"
-        >
+                <div>
+                    <div class="link-name">WEBSITE</div>
+                    <div class="link-desc">제이메디 사이트 바로가기</div>
+                </div>
 
-          <div>
-            <div class="link-name">
-              WEBSITE
-            </div>
+                <div class="arrow">↗</div>
 
-            <div class="link-description">
-              제이메디 공식 사이트
-            </div>
-          </div>
+            </a>
 
-          <div class="link-arrow">
-            ↗
-          </div>
-
-        </a>
-
-      </div>
+        </div>
 
     </section>
 
 
+    <!-- BUSINESS CARD -->
 
-    <!-- =====================
-         DIGITAL BUSINESS CARD
-    ====================== -->
+    <section class="card-section">
 
-    <section class="business">
-
-      <div class="business-label">
-        CONTACT
-      </div>
-
-      <div class="business-title">
-        MY<br>
-        CARD
-      </div>
-
-      <div class="business-hand">
-        제이메디 디지털 명함
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-logo">
-          JMEDI
+        <div class="card-label">
+            CONTACT / DIGITAL CARD
         </div>
 
-        <div class="card-mark">
-          J
+        <div class="card-title">
+            CONTACT
         </div>
 
-        <div class="card-company">
-          제이메디
-        </div>
+        <div class="business-card">
 
-        <div class="card-info">
-          의약품 도매상<br>
-          TEL. 010-0000-0000<br>
-          E-mail. example@email.com
-        </div>
+            <h3>JMEDI</h3>
 
-      </div>
+            <p>
+                의약품 도매상 제이메디<br>
+                TEL. 010-5909-8573<br>
+                E-MAIL. greencomma77@naver.com
+            </p>
+
+        </div>
 
     </section>
 
 
+    <footer class="footer">
 
-    <!-- =====================
-         FOOTER
-    ====================== -->
-
-    <footer>
-
-      <div class="footer-brand">
-        JMEDI
-      </div>
-
-      <div class="footer-copy">
-        © 2026 JMEDI. ALL RIGHTS RESERVED.
-      </div>
+        <strong>JMEDI</strong><br>
+        Pharmaceutical Wholesale
 
     </footer>
 
-
-  </main>
+</div>
 
 </body>
 </html>
