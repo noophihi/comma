@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu:wght@400;700&family=Gasoek+One&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu:wght@400;700&family=Gasoek+One&family=Noto+Sans+KR:wght@400;500;700;900&family=Orbitron:wght@900&family=Ultra&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -39,48 +39,80 @@
     }
 
     /* =========================
-       1파트 : TOP (HERO / 인사)
+       1파트 : TOP (수정 반영)
     ========================= */
     .top {
       position: relative;
-      background-color: #dcebfe;
+      /* 복합 세로 스트라이프 패턴 재현 */
+      background-color: #eaf3ff;
       background-image: repeating-linear-gradient(
         90deg,
-        rgba(255, 255, 255, 0.75),
-        rgba(255, 255, 255, 0.75) 12px,
-        transparent 12px,
-        transparent 24px
+        #cbe3fc,
+        #cbe3fc 3px,
+        #ffffff 3px,
+        #ffffff 6px,
+        #cbe3fc 6px,
+        #cbe3fc 16px,
+        #ffffff 16px,
+        #ffffff 22px
       );
-      padding: 35px 20px 40px;
-      min-height: 250px;
+      padding: 30px 20px 25px;
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
     }
 
+    .top-content {
+      position: relative;
+      z-index: 2;
+      max-width: 230px;
+    }
+
+    /* JMEDI 메인 타이틀 */
     .top-brand {
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 58px;
-      color: #3b5cb8;
+      font-family: 'Ultra', serif;
+      font-size: 52px;
+      color: #4351b8;
       letter-spacing: -1px;
       line-height: 1;
     }
 
+    /* 2026 카달로그 */
     .top-title {
       margin-top: 25px;
-      font-family: 'Black Han Sans', sans-serif;
-      font-size: 34px;
-      color: #4a8bf5;
-      letter-spacing: -1px;
+      font-family: 'Orbitron', 'Black Han Sans', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      color: #3b82f6;
+      letter-spacing: -0.5px;
+      line-height: 1;
     }
 
+    /* 인사말 */
     .top-sub {
-      margin-top: 6px;
-      font-size: 13px;
-      color: #555555;
-      line-height: 1.5;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #222222;
+      line-height: 1.45;
       font-weight: 500;
+      word-break: keep-all;
+    }
+
+    /* 오른쪽 우산/아이 일러스트 이미지 */
+    .top-illustration {
+      position: absolute;
+      right: -5px;
+      bottom: 0;
+      width: 210px;
+      height: auto;
+      z-index: 1;
+      pointer-events: none;
     }
 
     /* =========================
-       2파트 : CATALOG (레이아웃 확장 및 PDF 링크 적용)
+       2파트 : CATALOG
     ========================= */
     .catalog {
       background: #f2f2f2;
@@ -126,12 +158,11 @@
     }
 
     .catalog-right {
-      width: 220px; /* 카달로그 사진 비율 확보를 위해 이미지 공간 확장 */
+      width: 220px;
       flex-shrink: 0;
       position: relative;
     }
 
-    /* 마스킹 테이프 장식 */
     .tape-decoration {
       position: absolute;
       top: -12px;
@@ -181,7 +212,7 @@
     }
 
     /* =========================
-       3파트 : IMAGE AREA (유지)
+       3파트 : IMAGE AREA
     ========================= */
     .middle-banner {
       background: #cbe3fc;
@@ -195,7 +226,7 @@
     }
 
     /* =========================
-       4파트 : LINKS (외각 하늘색 네모 제거)
+       4파트 : LINKS
     ========================= */
     .links {
       background: #ffffff;
@@ -266,7 +297,6 @@
       margin-top: 6px;
     }
 
-    /* 외부 네모 박스 제거 및 각 글자 단위 박스만 남김 */
     .click-btn {
       font-family: 'Gaegu', cursive;
       font-size: 18px;
@@ -286,7 +316,7 @@
     }
 
     /* =========================
-       5파트 : CONTACT (로고 원본 이미지 적용)
+       5파트 : CONTACT
     ========================= */
     .business {
       background: #b9d7f9;
@@ -348,7 +378,6 @@
       gap: 15px;
     }
 
-    /* 원본 로고 이미지 삽입 */
     .card-logo {
       width: 95px;
       flex-shrink: 0;
@@ -443,15 +472,19 @@
 
     <!-- 1파트 : TOP (HERO / 인사) -->
     <section class="top">
-      <div class="top-brand">JMEDI</div>
-      <div class="top-title">2026 카달로그</div>
-      <div class="top-sub">
-        안녕하세요!<br>
-        의약품 도매상 제이메디 입니다.
+      <div class="top-content">
+        <div class="top-brand">JMEDI</div>
+        <div class="top-title">2026 카달로그</div>
+        <div class="top-sub">
+          안녕하세요!<br>
+          의약품 도매상 제이메디 입니다.
+        </div>
       </div>
+      <!-- 첨부해주신 우측 그림 이미지 -->
+      <img class="top-illustration" src="top_illustration.png" alt="제이메디 일러스트" onerror="this.src='https://via.placeholder.com/210x180/transparent/3b82f6?text=Illustration'">
     </section>
 
-    <!-- 2파트 : CATALOG (이미지 클릭 시 PDF 열기) -->
+    <!-- 2파트 : CATALOG -->
     <section class="catalog">
       <div class="catalog-container">
         <div class="catalog-left">
@@ -462,7 +495,6 @@
 
         <div class="catalog-right">
           <div class="tape-decoration"></div>
-          <!-- 카달로그 클릭 시 PDF 파일 연결 -->
           <a class="catalog-card" href="2026_제이메디_카달로그.pdf" target="_blank" title="카달로그 PDF 열기">
             <img class="catalog-img" src="2026 제이메디_카달로그.jpg" alt="2026 제이메디 카달로그" onerror="this.src='https://via.placeholder.com/220x310/e0f2fe/1e3a8a?text=JMEDI+2026+CATALOG'">
           </a>
@@ -472,12 +504,12 @@
       <div class="catalog-guide">[모바일 책자를 보시려면 우측의 사진을 클릭해주세요!]</div>
     </section>
 
-    <!-- 3파트 : IMAGE AREA (유지) -->
+    <!-- 3파트 : IMAGE AREA -->
     <section class="middle-banner">
       이미지가 들어갈 공간
     </section>
 
-    <!-- 4파트 : LINKS (버튼 외각 하늘색 박스 제거) -->
+    <!-- 4파트 : LINKS -->
     <section class="links">
       <div class="site-label">ONLINE SITE</div>
       <div class="links-title">홈페이지 사이트</div>
@@ -506,7 +538,7 @@
       </div>
     </section>
 
-    <!-- 5파트 : CONTACT (원본 로고 사용) -->
+    <!-- 5파트 : CONTACT -->
     <section class="business">
       <div class="contact-header">
         <div class="contact-title">CONTACT</div>
@@ -525,7 +557,6 @@
         </div>
 
         <div class="card-content">
-          <!-- 명함 원본 로고 이미지 경로 -->
           <div class="card-logo">
             <img src="jmedi_logo.png" alt="JMEDI" onerror="this.src='https://via.placeholder.com/95x65/ffffff/000000?text=JMEDI'">
           </div>
