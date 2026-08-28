@@ -39,7 +39,7 @@
     }
 
     /* =========================
-       1파트 : TOP (HERO)
+       1파트 : TOP
     ========================= */
     .top {
       position: relative;
@@ -215,7 +215,7 @@
     }
 
     /* =========================
-       4파트 : LINKS (버섯 그림 & 커스텀 은은한 하늘색 버튼 적용)
+       4파트 : LINKS (제공된 버섯 이미지 적용)
     ========================= */
     .links {
       background: #ffffff;
@@ -235,7 +235,7 @@
     .links-title-wrap {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       margin-top: 6px;
     }
 
@@ -246,13 +246,11 @@
       line-height: 1.1;
     }
 
-    /* 버섯 그림 아이콘 */
-    .icon-box {
+    /* 버섯 원본 이미지 */
+    .mushroom-img {
       width: 45px;
       height: 45px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      object-fit: contain;
     }
 
     .links-sub {
@@ -301,7 +299,7 @@
       margin-top: 6px;
     }
 
-    /* 클릭 버튼 각각 다른 은은한 하늘색 컬러링 */
+    /* 클릭 버튼 각각 다른 은은한 하늘색 적용 */
     .click-btn {
       font-family: 'Gaegu', cursive;
       font-size: 20px;
@@ -319,19 +317,19 @@
       justify-content: center;
       border-radius: 11px;
       box-shadow: inset 0 -3px 0 rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.05);
-      text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.12);
     }
 
-    /* 첫 번째 버튼 : 파스텔 스카이블루 계열 차이점 */
-    .btn-1 .c-1 { background: #60a5fa; } 
-    .btn-1 .c-2 { background: #93c5fd; }
+    /* 1번째 클릭 버튼: 은은한 딥스카이 / 라이트스카이 */
+    .btn-1 .c-1 { background: #52a5f5; }
+    .btn-1 .c-2 { background: #85c1f9; }
 
-    /* 두 번째 버튼 : 은은한 민트블루 & 아쿠아 계열 차이점 */
-    .btn-2 .c-1 { background: #38bdf8; }
-    .btn-2 .c-2 { background: #7dd3fc; }
+    /* 2번째 클릭 버튼: 은은한 파스텔아쿠아 / 민트스카이 */
+    .btn-2 .c-1 { background: #4ec2f7; }
+    .btn-2 .c-2 { background: #82daf8; }
 
     /* =========================
-       5파트 : CONTACT (우산 및 명함 원본 로고 적용)
+       5파트 : CONTACT (제공된 우산 & JM 로고 적용)
     ========================= */
     .business {
       background: #b9d7f9;
@@ -352,7 +350,14 @@
       line-height: 1;
     }
 
-    /* 아래의 연락처로 수정된 서체 */
+    /* 우산 원본 이미지 */
+    .umbrella-img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    /* "아래의" 문구 추가 */
     .contact-sub {
       font-family: 'Gaegu', cursive;
       font-size: 19px;
@@ -389,12 +394,11 @@
       gap: 15px;
     }
 
-    /* JM JMEDI 원본 명함 로고 스타일 */
+    /* JM JMEDI 원본 명함 로고 영역 */
     .card-logo {
-      width: 90px;
+      width: 95px;
       flex-shrink: 0;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
     }
@@ -404,14 +408,6 @@
       height: auto;
       display: block;
       object-fit: contain;
-    }
-
-    /* 이미지 미로드 시 선명하게 표시되는 로고 SVG 백업 */
-    .logo-fallback {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .card-info {
@@ -491,7 +487,7 @@
 
   <main class="page">
 
-    <!-- 1파트 : TOP (HERO) -->
+    <!-- 1파트 : TOP -->
     <section class="top">
       <div class="top-content">
         <div class="top-brand">JMEDI</div>
@@ -515,7 +511,7 @@
         <div class="catalog-right">
           <div class="tape-decoration"></div>
           <a class="catalog-card" href="2026_제이메디_카달로그.pdf" target="_blank" title="카달로그 바로가기">
-            <img class="catalog-img" src="2026 제이메디_카달로그.jpg" alt="2026 제이메디 카달로그 바로가기" onerror="this.src='https://via.placeholder.com/220x310/e0f2fe/1e3a8a?text=JMEDI+2026+CATALOG'">
+            <img class="catalog-img" src="2026 제이메디_카달로그.jpg" alt="2026 제이메디 카달로그 바로가기">
             <div class="shortcut-badge">바로가기 ➔</div>
           </a>
         </div>
@@ -529,15 +525,13 @@
       이미지가 들어갈 공간
     </section>
 
-    <!-- 4파트 : LINKS (버섯 그림 + 각각 다른 은은한 하늘색 버튼) -->
+    <!-- 4파트 : LINKS (제공해주신 별무늬 버섯 그림 그대로 적용) -->
     <section class="links">
       <div class="site-label">ONLINE SITE</div>
       <div class="links-title-wrap">
         <div class="links-title">홈페이지 사이트</div>
-        <!-- 별무늬 버섯 아이콘 -->
-        <div class="icon-box">
-          <img src="mushroom.png" alt="버섯" style="width:100%; height:100%; object-fit:contain;" onerror="this.outerHTML='<svg width=\'42\' height=\'42\' viewBox=\'0 0 100 100\'><ellipse cx=\'50\' cy=\'45\' rx=\'45\' ry=\'30\' fill=\'#7dd3fc\'/><polygon points=\'30,35 35,45 25,45\' fill=\'#fff\'/><polygon points=\'50,25 55,35 45,35\' fill=\'#fff\'/><polygon points=\'70,35 75,45 65,45\' fill=\'#fff\'/><path d=\'M40 45 Q35 85 45 90 L55 90 Q65 85 60 45 Z\' fill=\'#ffedd5\'/></svg>'">
-        </div>
+        <!-- 제공된 버섯 이미지 -->
+        <img class="mushroom-img" src="mushroom.png" alt="버섯">
       </div>
       <div class="links-sub">제이메디의 다양한 소식을 만나보세요!</div>
 
@@ -566,17 +560,15 @@
       </div>
     </section>
 
-    <!-- 5파트 : CONTACT (우산 그림 + "아래의" 문구 수정 + JM 로고 오류 해결) -->
+    <!-- 5파트 : CONTACT (제공해주신 우산 그림 + JM 로고 + "아래의" 추가) -->
     <section class="business">
       <div class="contact-header">
         <div class="contact-title">CONTACT</div>
-        <!-- 체크무늬 우산 아이콘 -->
-        <div class="icon-box">
-          <img src="umbrella.png" alt="우산" style="width:100%; height:100%; object-fit:contain;" onerror="this.outerHTML='<svg width=\'48\' height=\'48\' viewBox=\'0 0 100 100\'><path d=\'M10 50 Q50 10 90 50 Z\' fill=\'#0284c7\'/><path d=\'M10 50 Q23 60 36 50 Q50 60 64 50 Q77 60 90 50\' fill=\'#38bdf8\'/><rect x=\'48\' y=\'50\' width=\'4\' height=\'35\' fill=\'#94a3b8\'/><path d=\'M52 85 Q52 95 40 95\' stroke=\'#0284c7\' stroke-width=\'4\' fill=\'none\'/></svg>'">
-        </div>
+        <!-- 제공된 체크 우산 이미지 -->
+        <img class="umbrella-img" src="umbrella.png" alt="우산">
       </div>
 
-      <!-- 수정 완료: "아래의" 추가 -->
+      <!-- 수정 반영: 아래의 추가 -->
       <div class="contact-sub">아래의 연락처로 문의 주세요!</div>
 
       <div class="card-container">
@@ -589,16 +581,9 @@
         </div>
 
         <div class="card-content">
-          <!-- 명함 JM JMEDI 로고 (오류 방지 fallback 내장) -->
+          <!-- 제공해주신 JM JMEDI 로고 이미지 -->
           <div class="card-logo">
-            <img src="jmedi_logo.png" alt="JM JMEDI" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="logo-fallback" style="display:none;">
-              <svg width="85" height="45" viewBox="0 0 120 60">
-                <path d="M10 40 L25 10 L40 40 L50 20 L60 40" fill="none" stroke="#e11d48" stroke-width="8" stroke-linecap="round"/>
-                <path d="M45 40 L65 10 L85 40 L100 15" fill="none" stroke="#1d4ed8" stroke-width="9" stroke-linecap="round"/>
-                <text x="55" y="56" font-family="'Noto Sans KR', sans-serif" font-weight="900" font-size="12" fill="#1e3a8a" text-anchor="middle" letter-spacing="2">JMEDI</text>
-              </svg>
-            </div>
+            <img src="jmedi_logo.png" alt="JM JMEDI 로고">
           </div>
 
           <div class="card-info">
