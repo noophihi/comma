@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu:wght@400;700&family=Gasoek+One&family=Noto+Sans+KR:wght@400;500;700;900&family=Orbitron:wght@900&family=Ultra&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu:wght@400;700&family=Gasoek+One&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -39,73 +39,57 @@
     }
 
     /* =========================
-       1파트 : TOP (수정 반영)
+       1파트 : TOP (HERO / 원복 완료)
     ========================= */
     .top {
       position: relative;
-      /* 복합 세로 스트라이프 패턴 재현 */
-      background-color: #eaf3ff;
+      background-color: #dcebfe;
       background-image: repeating-linear-gradient(
         90deg,
-        #cbe3fc,
-        #cbe3fc 3px,
-        #ffffff 3px,
-        #ffffff 6px,
-        #cbe3fc 6px,
-        #cbe3fc 16px,
-        #ffffff 16px,
-        #ffffff 22px
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0.75) 12px,
+        transparent 12px,
+        transparent 24px
       );
-      padding: 30px 20px 25px;
-      min-height: 230px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      padding: 35px 20px 40px;
+      min-height: 250px;
       overflow: hidden;
     }
 
     .top-content {
       position: relative;
       z-index: 2;
-      max-width: 230px;
     }
 
-    /* JMEDI 메인 타이틀 */
     .top-brand {
-      font-family: 'Ultra', serif;
-      font-size: 52px;
-      color: #4351b8;
+      font-family: 'Gasoek One', sans-serif;
+      font-size: 58px;
+      color: #3b5cb8;
       letter-spacing: -1px;
       line-height: 1;
     }
 
-    /* 2026 카달로그 */
     .top-title {
       margin-top: 25px;
-      font-family: 'Orbitron', 'Black Han Sans', sans-serif;
-      font-size: 28px;
-      font-weight: 900;
-      color: #3b82f6;
-      letter-spacing: -0.5px;
-      line-height: 1;
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 34px;
+      color: #4a8bf5;
+      letter-spacing: -1px;
     }
 
-    /* 인사말 */
     .top-sub {
-      margin-top: 10px;
-      font-size: 12px;
-      color: #222222;
-      line-height: 1.45;
+      margin-top: 6px;
+      font-size: 13px;
+      color: #555555;
+      line-height: 1.5;
       font-weight: 500;
-      word-break: keep-all;
     }
 
-    /* 오른쪽 우산/아이 일러스트 이미지 */
     .top-illustration {
       position: absolute;
-      right: -5px;
+      right: 5px;
       bottom: 0;
-      width: 210px;
+      width: 190px;
       height: auto;
       z-index: 1;
       pointer-events: none;
@@ -226,7 +210,7 @@
     }
 
     /* =========================
-       4파트 : LINKS
+       4파트 : LINKS (버섯 그림 & 클릭 버튼 디자인 반영)
     ========================= */
     .links {
       background: #ffffff;
@@ -243,17 +227,30 @@
       letter-spacing: 0.5px;
     }
 
+    .links-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
     .links-title {
       font-family: 'Black Han Sans', sans-serif;
       font-size: 38px;
       color: #1d5297;
-      margin-top: 6px;
       line-height: 1.1;
+    }
+
+    /* 버섯 그림 */
+    .mushroom-icon {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
     }
 
     .links-sub {
       font-family: 'Gaegu', cursive;
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 700;
       color: #4b5563;
       margin-top: 4px;
@@ -297,26 +294,29 @@
       margin-top: 6px;
     }
 
+    /* 시안 이미지 재현 클릭 버튼 */
     .click-btn {
       font-family: 'Gaegu', cursive;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
       color: #ffffff;
       display: flex;
-      gap: 3px;
+      gap: 5px;
     }
 
     .click-btn span {
-      background: #60a5fa;
-      padding: 3px 7px;
-      border-radius: 6px;
-      display: inline-block;
-      line-height: 1;
-      box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+      background: #7dd3fc;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      box-shadow: inset 0 -2px 0 rgba(0,0,0,0.1);
     }
 
     /* =========================
-       5파트 : CONTACT
+       5파트 : CONTACT (우산 이미지 & 명함 원본 로고 적용)
     ========================= */
     .business {
       background: #b9d7f9;
@@ -325,8 +325,8 @@
 
     .contact-header {
       display: flex;
-      align-items: flex-start;
-      gap: 10px;
+      align-items: center;
+      gap: 12px;
       margin-bottom: 4px;
     }
 
@@ -337,14 +337,17 @@
       line-height: 1;
     }
 
+    /* 체크무늬 우산 이미지 */
     .umbrella-icon {
-      width: 45px;
-      height: 45px;
+      width: 50px;
+      height: 50px;
       object-fit: contain;
     }
 
+    /* 4파트와 동일한 손글씨 폰트로 수정 */
     .contact-sub {
-      font-size: 13px;
+      font-family: 'Gaegu', cursive;
+      font-size: 19px;
       font-weight: 700;
       color: #2b303a;
       margin-bottom: 25px;
@@ -378,6 +381,7 @@
       gap: 15px;
     }
 
+    /* 원본 JM JMEDI 로고 이미지 */
     .card-logo {
       width: 95px;
       flex-shrink: 0;
@@ -480,8 +484,7 @@
           의약품 도매상 제이메디 입니다.
         </div>
       </div>
-      <!-- 첨부해주신 우측 그림 이미지 -->
-      <img class="top-illustration" src="top_illustration.png" alt="제이메디 일러스트" onerror="this.src='https://via.placeholder.com/210x180/transparent/3b82f6?text=Illustration'">
+      <img class="top-illustration" src="top_illustration.png" alt="제이메디 일러스트" onerror="this.style.display='none'">
     </section>
 
     <!-- 2파트 : CATALOG -->
@@ -509,10 +512,14 @@
       이미지가 들어갈 공간
     </section>
 
-    <!-- 4파트 : LINKS -->
+    <!-- 4파트 : LINKS (버섯 그림 추가) -->
     <section class="links">
       <div class="site-label">ONLINE SITE</div>
-      <div class="links-title">홈페이지 사이트</div>
+      <div class="links-title-wrap">
+        <div class="links-title">홈페이지 사이트</div>
+        <!-- 별무늬 버섯 이미지 -->
+        <img class="mushroom-icon" src="mushroom.png" alt="버섯" onerror="this.style.display='none'">
+      </div>
       <div class="links-sub">제이메디의 다양한 소식을 만나보세요!</div>
 
       <div class="link-list">
@@ -538,13 +545,15 @@
       </div>
     </section>
 
-    <!-- 5파트 : CONTACT -->
+    <!-- 5파트 : CONTACT (우산 이미지 및 명함 원본 로고 적용) -->
     <section class="business">
       <div class="contact-header">
         <div class="contact-title">CONTACT</div>
+        <!-- 체크무늬 우산 이미지 -->
         <img class="umbrella-icon" src="umbrella.png" alt="우산" onerror="this.style.display='none'">
       </div>
 
+      <!-- 손글씨 폰트 적용 -->
       <div class="contact-sub">연락처로 문의 주세요!</div>
 
       <div class="card-container">
@@ -557,8 +566,9 @@
         </div>
 
         <div class="card-content">
+          <!-- 명함 원본 로고 이미지 -->
           <div class="card-logo">
-            <img src="jmedi_logo.png" alt="JMEDI" onerror="this.src='https://via.placeholder.com/95x65/ffffff/000000?text=JMEDI'">
+            <img src="jmedi_logo.png" alt="JM JMEDI" onerror="this.src='https://via.placeholder.com/95x65/ffffff/000000?text=JMEDI'">
           </div>
 
           <div class="card-info">
