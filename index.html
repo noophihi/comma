@@ -70,24 +70,31 @@
       font-weight: 700;
     }
 
+    /* JMEDI 크게 */
+
     .brand-small {
-      margin-top: 60px;
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 1px;
+      margin-top: 55px;
+      font-family: 'Gasoek One', sans-serif;
+      font-size: 55px;
+      line-height: 0.9;
+      letter-spacing: -2px;
+      color: #172b52;
     }
+
+    /* 안녕하세요 */
 
     .hello {
-      margin-top: 8px;
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 42px;
-      line-height: 0.95;
-      letter-spacing: -2px;
+      margin-top: 16px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.6;
     }
 
+    /* 의약품 도매상 제이메디 입니다. */
+
     .brand-name {
-      margin-top: 15px;
-      font-size: 13px;
+      margin-top: 0;
+      font-size: 14px;
       font-weight: 700;
       line-height: 1.6;
     }
@@ -137,8 +144,8 @@
 
     .catalog-link {
       display: block;
-      margin-top: 32px;
-      width: 72%;
+      margin-top: 28px;
+      width: 58%;
       margin-left: auto;
       margin-right: auto;
       transition: transform 0.25s ease;
@@ -149,8 +156,15 @@
     }
 
     /*
-      현재 catalog-cover.jpg를 넣으면
-      카탈로그 첫 페이지 이미지가 들어가는 자리
+      실제 카탈로그 표지 이미지를 넣을 경우
+
+      <img
+        src="catalog-cover.jpg"
+        class="catalog-cover"
+        alt="2026 제이메디 카탈로그"
+      >
+
+      로 변경하면 됩니다.
     */
 
     .catalog-cover {
@@ -173,7 +187,7 @@
 
     .catalog-placeholder span {
       font-family: 'Gasoek One', sans-serif;
-      font-size: 32px;
+      font-size: 27px;
       color: #172b52;
     }
 
@@ -186,55 +200,25 @@
 
 
     /* =========================
-       INTRO
+       IMAGE AREA
+       나중에 이미지 넣을 부분
     ========================= */
 
-    .intro {
-      background: #172b52;
-      color: white;
-      padding: 60px 20px 65px;
-      position: relative;
-      overflow: hidden;
+    .image-section {
+      background: #ffffff;
+      padding: 0 20px 65px;
     }
 
-    .intro-small {
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      font-weight: 700;
-    }
-
-    .intro-title {
-      margin-top: 30px;
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 54px;
-      line-height: 0.95;
-      letter-spacing: -2px;
-    }
-
-    .intro-hand {
-      margin-top: 18px;
-      font-family: 'Gaegu', cursive;
-      font-size: 28px;
-      font-weight: 700;
-      transform: rotate(-3deg);
-    }
-
-    .intro-text {
-      margin-top: 30px;
-      max-width: 290px;
-      font-size: 12px;
-      line-height: 1.8;
-      color: #dcecff;
-    }
-
-    .intro-circle {
-      position: absolute;
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      background: #8bb6e7;
-      right: -65px;
-      bottom: -55px;
+    .image-placeholder {
+      width: 100%;
+      min-height: 260px;
+      background: #eef5fc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9aaabd;
+      font-size: 11px;
+      text-align: center;
     }
 
 
@@ -328,11 +312,12 @@
     }
 
     /* 디지털 명함 */
+
     .card {
       margin-top: 35px;
       background: white;
       padding: 25px;
-      min-height: 210px;
+      min-height: 250px;
       box-shadow: 12px 12px 0 #9dbce0;
       position: relative;
     }
@@ -343,17 +328,29 @@
     }
 
     .card-company {
-      margin-top: 55px;
+      margin-top: 48px;
       font-family: 'Gasoek One', sans-serif;
       font-size: 28px;
       color: #172b52;
     }
 
+    .card-role {
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #555;
+    }
+
     .card-info {
-      margin-top: 8px;
+      margin-top: 22px;
       font-size: 10px;
-      line-height: 1.8;
+      line-height: 1.9;
       color: #666;
+    }
+
+    .card-info strong {
+      color: #172b52;
+      font-weight: 900;
     }
 
     .card-mark {
@@ -425,9 +422,13 @@
         <div class="menu">↗</div>
       </div>
 
+      <!-- 크게 들어가는 JMEDI -->
+
       <div class="brand-small">
         JMEDI
       </div>
+
+      <!-- 작은 인사말 -->
 
       <div class="hello">
         안녕하세요!
@@ -451,9 +452,7 @@
 
     <section class="catalog">
 
-      <div class="section-label">
-        JMEDI / 2026
-      </div>
+      <!-- JMEDI / 2026 삭제 -->
 
       <div class="catalog-title">
         CATALOG
@@ -473,14 +472,13 @@
       >
 
         <!--
-        실제 카탈로그 표지 이미지를 넣을 경우:
+          실제 카탈로그 표지 이미지를 넣을 경우:
 
-        <img
-          src="catalog-cover.jpg"
-          class="catalog-cover"
-          alt="2026 제이메디 카탈로그"
-        >
-
+          <img
+            src="catalog-cover.jpg"
+            class="catalog-cover"
+            alt="2026 제이메디 카탈로그"
+          >
         -->
 
         <div class="catalog-placeholder">
@@ -501,31 +499,17 @@
 
 
     <!-- =====================
-         INTRO
+         IMAGE AREA
+         나중에 이미지 삽입
     ====================== -->
 
-    <section class="intro">
+    <section class="image-section">
 
-      <div class="intro-small">
-        ABOUT JMEDI
+      <div class="image-placeholder">
+
+        이미지가 들어갈 공간
+
       </div>
-
-      <div class="intro-title">
-        MEDICAL<br>
-        SUPPLY
-      </div>
-
-      <div class="intro-hand">
-        함께하는 건강한 일상
-      </div>
-
-      <p class="intro-text">
-        제이메디는 의약품 및 다양한 헬스케어 제품을
-        보다 편리하게 만나볼 수 있도록
-        고객과 함께하고 있습니다.
-      </p>
-
-      <div class="intro-circle"></div>
 
     </section>
 
@@ -538,36 +522,39 @@
     <section class="links">
 
       <div class="section-label">
-        ONLINE
+        ONLINE SITE
       </div>
 
       <div class="links-title">
-        FIND US
+        HOMEPAGE
       </div>
 
       <div class="links-sub">
-        제이메디의 다양한 소식을 만나보세요.
+        제이메디의 다양한 소식을 만나보세요!
       </div>
 
 
       <div class="link-list">
 
-        <!-- 블로그 -->
+
+        <!-- BLOG -->
 
         <a
-          href="#"
+          href="https://blog.naver.com/green__comma"
           class="link-item"
           target="_blank"
         >
 
           <div>
+
             <div class="link-name">
               BLOG
             </div>
 
             <div class="link-description">
-              제이메디 블로그
+              납품사례 블로그
             </div>
+
           </div>
 
           <div class="link-arrow">
@@ -577,22 +564,24 @@
         </a>
 
 
-        <!-- 사이트 -->
+        <!-- WEBSITE -->
 
         <a
-          href="#"
+          href="http://www.greencommagift.com/"
           class="link-item"
           target="_blank"
         >
 
           <div>
+
             <div class="link-name">
               WEBSITE
             </div>
 
             <div class="link-description">
-              제이메디 공식 사이트
+              그린콤마기프트 사이트
             </div>
+
           </div>
 
           <div class="link-arrow">
@@ -600,6 +589,7 @@
           </div>
 
         </a>
+
 
       </div>
 
@@ -618,16 +608,18 @@
       </div>
 
       <div class="business-title">
-        MY<br>
-        CARD
+        CONTACT
       </div>
 
       <div class="business-hand">
-        제이메디 디지털 명함
+        연락처로 문의주세요!
       </div>
 
 
       <div class="card">
+
+        <!-- 현재는 텍스트 로고 -->
+        <!-- 추후 실제 제이메디 로고 이미지로 교체 가능 -->
 
         <div class="card-logo">
           JMEDI
@@ -637,14 +629,29 @@
           J
         </div>
 
+
         <div class="card-company">
-          제이메디
+          김휘린
         </div>
 
+        <div class="card-role">
+          의약품 | 건강기능식품
+        </div>
+
+
         <div class="card-info">
-          의약품 도매상<br>
-          TEL. 010-0000-0000<br>
-          E-mail. example@email.com
+
+          <strong>TEL.</strong>
+          010-5909-8573
+          <br>
+
+          <strong>E-mail.</strong>
+          greencomma77@naver.com
+          <br>
+
+          <strong>Address.</strong>
+          부산 사상구 낙동대로 839 1층
+
         </div>
 
       </div>
