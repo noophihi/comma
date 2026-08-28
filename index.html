@@ -80,18 +80,25 @@
     }
 
     /* =========================
-       2파트 : CATALOG
+       2파트 : CATALOG (레이아웃 확장 및 PDF 링크 적용)
     ========================= */
     .catalog {
       background: #f2f2f2;
-      padding: 40px 20px 45px;
+      padding: 35px 20px 45px;
+      position: relative;
+    }
+
+    .catalog-container {
       display: flex;
       gap: 15px;
-      align-items: flex-start;
+      align-items: stretch;
     }
 
     .catalog-left {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
     .catalog-tag {
@@ -104,43 +111,36 @@
 
     .catalog-title {
       font-family: 'Black Han Sans', sans-serif;
-      font-size: 34px;
+      font-size: 32px;
       color: #111;
       line-height: 1;
       margin-top: 2px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .catalog-desc {
       font-size: 11px;
       color: #666;
-      margin-bottom: 35px;
       font-weight: 500;
-    }
-
-    .catalog-guide {
-      font-size: 10px;
-      font-weight: 700;
-      color: #111;
       line-height: 1.4;
-      letter-spacing: -0.5px;
     }
 
     .catalog-right {
-      width: 200px;
+      width: 220px; /* 카달로그 사진 비율 확보를 위해 이미지 공간 확장 */
       flex-shrink: 0;
       position: relative;
     }
 
+    /* 마스킹 테이프 장식 */
     .tape-decoration {
       position: absolute;
-      top: -10px;
-      left: -10px;
-      width: 70px;
+      top: -12px;
+      left: 20px;
+      width: 75px;
       height: 22px;
-      background: rgba(56, 189, 248, 0.6);
-      transform: rotate(-15deg);
-      z-index: 2;
+      background: rgba(56, 189, 248, 0.7);
+      transform: rotate(-8deg);
+      z-index: 3;
       background-image: repeating-linear-gradient(
         45deg,
         transparent,
@@ -153,23 +153,35 @@
     .catalog-card {
       display: block;
       background: #ffffff;
-      border-radius: 4px;
+      border-radius: 2px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      z-index: 1;
     }
 
     .catalog-card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.18);
     }
 
     .catalog-img {
       width: 100%;
+      height: auto;
       display: block;
     }
 
+    .catalog-guide {
+      margin-top: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.5px;
+    }
+
     /* =========================
-       3파트 : IMAGE AREA
+       3파트 : IMAGE AREA (유지)
     ========================= */
     .middle-banner {
       background: #cbe3fc;
@@ -183,7 +195,7 @@
     }
 
     /* =========================
-       4파트 : LINKS
+       4파트 : LINKS (외각 하늘색 네모 제거)
     ========================= */
     .links {
       background: #ffffff;
@@ -254,27 +266,27 @@
       margin-top: 6px;
     }
 
+    /* 외부 네모 박스 제거 및 각 글자 단위 박스만 남김 */
     .click-btn {
-      background: #7dd3fc;
-      color: #ffffff;
       font-family: 'Gaegu', cursive;
       font-size: 18px;
       font-weight: 700;
-      padding: 6px 12px;
-      border-radius: 12px;
-      box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+      color: #ffffff;
       display: flex;
-      gap: 2px;
+      gap: 3px;
     }
 
     .click-btn span {
       background: #60a5fa;
-      padding: 2px 6px;
+      padding: 3px 7px;
       border-radius: 6px;
+      display: inline-block;
+      line-height: 1;
+      box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
     }
 
     /* =========================
-       5파트 : CONTACT (명함 수정)
+       5파트 : CONTACT (로고 원본 이미지 적용)
     ========================= */
     .business {
       background: #b9d7f9;
@@ -308,7 +320,6 @@
       margin-bottom: 25px;
     }
 
-    /* 명함 카드 */
     .card-container {
       position: relative;
       background: #ffffff;
@@ -317,7 +328,6 @@
       overflow: hidden;
     }
 
-    /* 명함 상단 5단계 컬러바 */
     .color-bar {
       display: flex;
       height: 12px;
@@ -331,7 +341,6 @@
     .cb-4 { background-color: #2b6cb0; }
     .cb-5 { background-color: #173867; }
 
-    /* 명함 본문 */
     .card-content {
       display: flex;
       align-items: center;
@@ -339,7 +348,7 @@
       gap: 15px;
     }
 
-    /* 명함 왼쪽 로고 (JM 로고 제작 및 반영) */
+    /* 원본 로고 이미지 삽입 */
     .card-logo {
       width: 95px;
       flex-shrink: 0;
@@ -348,12 +357,13 @@
       align-items: center;
     }
 
-    .card-logo svg {
+    .card-logo img {
       width: 100%;
       height: auto;
+      display: block;
+      object-fit: contain;
     }
 
-    /* 명함 오른쪽 정보 */
     .card-info {
       flex: 1;
     }
@@ -441,29 +451,33 @@
       </div>
     </section>
 
-    <!-- 2파트 : CATALOG -->
+    <!-- 2파트 : CATALOG (이미지 클릭 시 PDF 열기) -->
     <section class="catalog">
-      <div class="catalog-left">
-        <div class="catalog-tag">2026 JMEDI</div>
-        <div class="catalog-title">CATALOG</div>
-        <div class="catalog-desc">2026 제이메디 카달로그 입니다.</div>
-        <div class="catalog-guide">[모바일 책자를 보시려면 우측의 사진을 클릭해주세요!]</div>
+      <div class="catalog-container">
+        <div class="catalog-left">
+          <div class="catalog-tag">2026 JMEDI</div>
+          <div class="catalog-title">CATALOG</div>
+          <div class="catalog-desc">2026 제이메디 카달로그 입니다.</div>
+        </div>
+
+        <div class="catalog-right">
+          <div class="tape-decoration"></div>
+          <!-- 카달로그 클릭 시 PDF 파일 연결 -->
+          <a class="catalog-card" href="2026_제이메디_카달로그.pdf" target="_blank" title="카달로그 PDF 열기">
+            <img class="catalog-img" src="2026 제이메디_카달로그.jpg" alt="2026 제이메디 카달로그" onerror="this.src='https://via.placeholder.com/220x310/e0f2fe/1e3a8a?text=JMEDI+2026+CATALOG'">
+          </a>
+        </div>
       </div>
 
-      <div class="catalog-right">
-        <div class="tape-decoration"></div>
-        <a class="catalog-card" href="catalog.pdf" target="_blank">
-          <img class="catalog-img" src="catalog_cover.jpg" alt="JMEDI 2026 CATALOG" onerror="this.src='https://via.placeholder.com/200x280/e0f2fe/1e3a8a?text=JMEDI+2026+CATALOG'">
-        </a>
-      </div>
+      <div class="catalog-guide">[모바일 책자를 보시려면 우측의 사진을 클릭해주세요!]</div>
     </section>
 
-    <!-- 3파트 : IMAGE AREA -->
+    <!-- 3파트 : IMAGE AREA (유지) -->
     <section class="middle-banner">
       이미지가 들어갈 공간
     </section>
 
-    <!-- 4파트 : LINKS -->
+    <!-- 4파트 : LINKS (버튼 외각 하늘색 박스 제거) -->
     <section class="links">
       <div class="site-label">ONLINE SITE</div>
       <div class="links-title">홈페이지 사이트</div>
@@ -492,7 +506,7 @@
       </div>
     </section>
 
-    <!-- 5파트 : CONTACT (명함 영역) -->
+    <!-- 5파트 : CONTACT (원본 로고 사용) -->
     <section class="business">
       <div class="contact-header">
         <div class="contact-title">CONTACT</div>
@@ -502,7 +516,6 @@
       <div class="contact-sub">연락처로 문의 주세요!</div>
 
       <div class="card-container">
-        <!-- 상단 5단계 컬러바 -->
         <div class="color-bar">
           <span class="cb-1"></span>
           <span class="cb-2"></span>
@@ -512,21 +525,11 @@
         </div>
 
         <div class="card-content">
-          <!-- 명함 왼쪽 : 로고 (요청하신 JM 로고 이미지 반영) -->
+          <!-- 명함 원본 로고 이미지 경로 -->
           <div class="card-logo">
-            <svg viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- M 글자 (파란색) -->
-              <path d="M70 12 H98 L118 60 L138 12 H160 V80 H138 V36 L122 75 H114 L98 36 V80 H70 Z" fill="#1b5297"/>
-              <!-- 노란색 아치 선 -->
-              <path d="M5 82 C30 75 70 30 155 42 C120 40 50 60 15 88 Z" fill="#eab308"/>
-              <!-- J 글자 (빨간색) -->
-              <path d="M26 40 H50 V68 C50 78 40 82 28 82 C18 82 8 76 5 68 L22 62 C23 66 26 68 29 68 C32 68 34 66 34 62 V40 Z" fill="#dc2626"/>
-              <!-- 하단 J MEDI 텍스트 -->
-              <text x="80" y="103" font-family="'Georgia', 'Times New Roman', serif" font-size="19" font-weight="bold" fill="#555555" text-anchor="middle" letter-spacing="5">J MEDI</text>
-            </svg>
+            <img src="jmedi_logo.png" alt="JMEDI" onerror="this.src='https://via.placeholder.com/95x65/ffffff/000000?text=JMEDI'">
           </div>
 
-          <!-- 명함 오른쪽 : 정보 (주소 변경 완료) -->
           <div class="card-info">
             <div class="name-row">
               <span class="name">김휘린</span>
