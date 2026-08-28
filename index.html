@@ -38,9 +38,7 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
-    /* =========================
-       1파트 : TOP
-    ========================= */
+    /* 1파트 : TOP */
     .top {
       position: relative;
       background-color: #dcebfe;
@@ -85,9 +83,7 @@
       font-weight: 500;
     }
 
-    /* =========================
-       2파트 : CATALOG
-    ========================= */
+    /* 2파트 : CATALOG */
     .catalog {
       background: #f2f2f2;
       padding: 35px 20px 45px;
@@ -200,9 +196,7 @@
       letter-spacing: -0.5px;
     }
 
-    /* =========================
-       3파트 : IMAGE AREA
-    ========================= */
+    /* 3파트 : BANNER */
     .middle-banner {
       background: #cbe3fc;
       min-height: 200px;
@@ -214,9 +208,7 @@
       font-weight: 700;
     }
 
-    /* =========================
-       4파트 : LINKS (제공된 버섯 이미지 적용)
-    ========================= */
+    /* 4파트 : LINKS */
     .links {
       background: #ffffff;
       padding: 40px 20px 30px;
@@ -246,7 +238,6 @@
       line-height: 1.1;
     }
 
-    /* 버섯 원본 이미지 */
     .mushroom-img {
       width: 45px;
       height: 45px;
@@ -299,7 +290,6 @@
       margin-top: 6px;
     }
 
-    /* 클릭 버튼 각각 다른 은은한 하늘색 적용 */
     .click-btn {
       font-family: 'Gaegu', cursive;
       font-size: 20px;
@@ -320,17 +310,13 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.12);
     }
 
-    /* 1번째 클릭 버튼: 은은한 딥스카이 / 라이트스카이 */
     .btn-1 .c-1 { background: #52a5f5; }
     .btn-1 .c-2 { background: #85c1f9; }
 
-    /* 2번째 클릭 버튼: 은은한 파스텔아쿠아 / 민트스카이 */
     .btn-2 .c-1 { background: #4ec2f7; }
     .btn-2 .c-2 { background: #82daf8; }
 
-    /* =========================
-       5파트 : CONTACT (제공된 우산 & JM 로고 적용)
-    ========================= */
+    /* 5파트 : CONTACT */
     .business {
       background: #b9d7f9;
       padding: 40px 20px 50px;
@@ -350,14 +336,12 @@
       line-height: 1;
     }
 
-    /* 우산 원본 이미지 */
     .umbrella-img {
       width: 52px;
       height: 52px;
       object-fit: contain;
     }
 
-    /* "아래의" 문구 추가 */
     .contact-sub {
       font-family: 'Gaegu', cursive;
       font-size: 19px;
@@ -394,7 +378,6 @@
       gap: 15px;
     }
 
-    /* JM JMEDI 원본 명함 로고 영역 */
     .card-logo {
       width: 95px;
       flex-shrink: 0;
@@ -455,9 +438,7 @@
       word-break: keep-all;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
     footer {
       background: #1e3a8a;
       padding: 20px;
@@ -510,8 +491,9 @@
 
         <div class="catalog-right">
           <div class="tape-decoration"></div>
-          <a class="catalog-card" href="2026_제이메디_카달로그.pdf" target="_blank" title="카달로그 바로가기">
-            <img class="catalog-img" src="2026 제이메디_카달로그.jpg" alt="2026 제이메디 카달로그 바로가기">
+          <!-- catalog.pdf 연동 -->
+          <a class="catalog-card" href="./catalog.pdf" target="_blank" title="카달로그 바로가기">
+            <img class="catalog-img" src="./catalog_thumb.jpg" alt="2026 제이메디 카달로그 바로가기">
             <div class="shortcut-badge">바로가기 ➔</div>
           </a>
         </div>
@@ -525,13 +507,12 @@
       이미지가 들어갈 공간
     </section>
 
-    <!-- 4파트 : LINKS (제공해주신 별무늬 버섯 그림 그대로 적용) -->
+    <!-- 4파트 : LINKS -->
     <section class="links">
       <div class="site-label">ONLINE SITE</div>
       <div class="links-title-wrap">
         <div class="links-title">홈페이지 사이트</div>
-        <!-- 제공된 버섯 이미지 -->
-        <img class="mushroom-img" src="mushroom.png" alt="버섯">
+        <img class="mushroom-img" src="./mushroom.png" alt="버섯">
       </div>
       <div class="links-sub">제이메디의 다양한 소식을 만나보세요!</div>
 
@@ -560,15 +541,13 @@
       </div>
     </section>
 
-    <!-- 5파트 : CONTACT (제공해주신 우산 그림 + JM 로고 + "아래의" 추가) -->
+    <!-- 5파트 : CONTACT -->
     <section class="business">
       <div class="contact-header">
         <div class="contact-title">CONTACT</div>
-        <!-- 제공된 체크 우산 이미지 -->
-        <img class="umbrella-img" src="umbrella.png" alt="우산">
+        <img class="umbrella-img" src="./umbrella.png" alt="우산">
       </div>
 
-      <!-- 수정 반영: 아래의 추가 -->
       <div class="contact-sub">아래의 연락처로 문의 주세요!</div>
 
       <div class="card-container">
@@ -581,9 +560,8 @@
         </div>
 
         <div class="card-content">
-          <!-- 제공해주신 JM JMEDI 로고 이미지 -->
           <div class="card-logo">
-            <img src="jmedi_logo.png" alt="JM JMEDI 로고">
+            <img src="./jmedi_logo.png" alt="JM JMEDI 로고">
           </div>
 
           <div class="card-info">
@@ -602,12 +580,8 @@
                 <span class="info-val">greencomma77@naver.com</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Site |</span>
-                <span class="info-val">greencommagift.com</span>
-              </div>
-              <div class="info-item">
                 <span class="info-label">Address |</span>
-                <span class="info-val">부산광역시 사상구 낙동대로839 제이메디 1층</span>
+                <span class="info-val">부산 사상구 낙동대로 839, 1층 제이메디</span>
               </div>
             </div>
           </div>
