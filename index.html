@@ -38,7 +38,7 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
-    /* 1파트 : TOP */
+    /* 1파트 : TOP (세로 여백 및 최소 높이 조절) */
     .top {
       position: relative;
       background-color: #dcebfe;
@@ -49,8 +49,8 @@
         transparent 12px,
         transparent 24px
       );
-      padding: 35px 20px 40px;
-      min-height: 250px;
+      padding: 25px 20px 25px;
+      min-height: 190px;
       overflow: hidden;
     }
 
@@ -61,16 +61,16 @@
 
     .top-brand {
       font-family: 'Gasoek One', sans-serif;
-      font-size: 58px;
+      font-size: 52px;
       color: #3b5cb8;
       letter-spacing: -1px;
       line-height: 1;
     }
 
     .top-title {
-      margin-top: 25px;
+      margin-top: 15px;
       font-family: 'Black Han Sans', sans-serif;
-      font-size: 34px;
+      font-size: 30px;
       color: #4a8bf5;
       letter-spacing: -1px;
     }
@@ -79,14 +79,14 @@
       margin-top: 6px;
       font-size: 13px;
       color: #555555;
-      line-height: 1.5;
+      line-height: 1.4;
       font-weight: 500;
     }
 
-    /* 2파트 : CATALOG */
+    /* 2파트 : CATALOG (위아래 여백을 늘려 영역 확장) */
     .catalog {
       background: #f2f2f2;
-      padding: 35px 20px 45px;
+      padding: 50px 20px 50px;
       position: relative;
     }
 
@@ -188,12 +188,15 @@
       display: block;
     }
 
+    /* 우측 책자 이미지 바로 밑에 중앙 정렬되는 문구 */
     .catalog-guide {
-      margin-top: 20px;
-      font-size: 11px;
+      margin-top: 10px;
+      font-size: 10.5px;
       font-weight: 700;
-      color: #111;
+      color: #444444;
+      text-align: center;
       letter-spacing: -0.5px;
+      line-height: 1.3;
     }
 
     /* 3파트 : BANNER */
@@ -496,10 +499,10 @@
             <img class="catalog-img" src="./catalog_thumb.jpg" alt="2026 제이메디 카달로그 바로가기">
             <div class="shortcut-badge">바로가기 ➔</div>
           </a>
+          <!-- 책자 바로 아래 배치된 문구 -->
+          <div class="catalog-guide">[책자를 보시려면 위의 사진을 클릭해주세요!]</div>
         </div>
       </div>
-
-      <div class="catalog-guide">[모바일 책자를 보시려면 우측의 사진을 클릭해주세요!]</div>
     </section>
 
     <!-- 3파트 : IMAGE AREA -->
