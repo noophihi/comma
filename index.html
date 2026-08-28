@@ -55,15 +55,15 @@
       background-image:
         linear-gradient(
           90deg,
-          rgba(255,255,255,0.28) 1px,
-          transparent 1px
+          rgba(255,255,255,0.55) 2px,
+          transparent 2px
         ),
         linear-gradient(
-          rgba(255,255,255,0.28) 1px,
-          transparent 1px
+          rgba(255,255,255,0.55) 2px,
+          transparent 2px
         );
 
-      background-size: 18px 18px;
+      background-size: 28px 28px;
 
       min-height: 310px;
       padding: 22px 20px 25px;
@@ -186,18 +186,6 @@
     .catalog-link:hover {
       transform: translateY(-5px);
     }
-
-    /*
-      실제 카탈로그 표지 이미지를 넣을 경우
-
-      <img
-        src="catalog-cover.jpg"
-        class="catalog-cover"
-        alt="2026 제이메디 카탈로그"
-      >
-
-      로 변경하면 됩니다.
-    */
 
     .catalog-cover {
       width: 100%;
@@ -322,14 +310,14 @@
       background: #dcecff;
     }
 
+    /* 작은 CONTACT 삭제 */
+
     .business-label {
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 1.5px;
+      display: none;
     }
 
     .business-title {
-      margin-top: 10px;
+      margin-top: 0;
       font-family: 'Gasoek One', sans-serif;
       font-size: 46px;
       line-height: 0.95;
@@ -451,8 +439,6 @@
 
       <div class="top-header">
 
-        <!-- 작은 JMEDI는 화면에서 제거됨 -->
-
         <div class="logo">JMEDI</div>
 
         <div class="menu">↗</div>
@@ -460,14 +446,10 @@
       </div>
 
 
-      <!-- 크게 들어가는 JMEDI -->
-
       <div class="brand-small">
         JMEDI
       </div>
 
-
-      <!-- 작은 인사말 -->
 
       <div class="hello">
         안녕하세요!
@@ -477,8 +459,6 @@
         의약품 도매상 제이메디 입니다.
       </div>
 
-
-      <!-- 기존 01은 화면에서 제거됨 -->
 
       <div class="top-number">
         01
@@ -503,23 +483,11 @@
       </div>
 
 
-      <!-- 카탈로그 클릭 영역 -->
-
       <a
         class="catalog-link"
         href="catalog.pdf"
         target="_blank"
       >
-
-        <!--
-          실제 카탈로그 표지 이미지를 넣을 경우:
-
-          <img
-            src="catalog-cover.jpg"
-            class="catalog-cover"
-            alt="2026 제이메디 카탈로그"
-          >
-        -->
 
         <div class="catalog-placeholder">
           <span>
@@ -643,10 +611,6 @@
 
     <section class="business">
 
-      <div class="business-label">
-        CONTACT
-      </div>
-
       <div class="business-title">
         CONTACT
       </div>
@@ -687,7 +651,7 @@
           <br>
 
           <strong>Address.</strong>
-          부산광역시 사상구 낙동대로 839, 제이메디 1층
+          부산 사상구 낙동대로 839 1층
 
         </div>
 
