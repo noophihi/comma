@@ -39,7 +39,7 @@
     }
 
     /* =========================
-       1파트 : TOP (HERO / 원복 완료)
+       1파트 : TOP (HERO / 인사)
     ========================= */
     .top {
       position: relative;
@@ -96,7 +96,7 @@
     }
 
     /* =========================
-       2파트 : CATALOG
+       2파트 : CATALOG (오른쪽 바로가기 책자 영역 보강)
     ========================= */
     .catalog {
       background: #f2f2f2;
@@ -141,10 +141,12 @@
       line-height: 1.4;
     }
 
+    /* 오른쪽 바로가기 책자 콘테이너 */
     .catalog-right {
       width: 220px;
       flex-shrink: 0;
       position: relative;
+      perspective: 1000px;
     }
 
     .tape-decoration {
@@ -155,7 +157,7 @@
       height: 22px;
       background: rgba(56, 189, 248, 0.7);
       transform: rotate(-8deg);
-      z-index: 3;
+      z-index: 4;
       background-image: repeating-linear-gradient(
         45deg,
         transparent,
@@ -165,20 +167,40 @@
       );
     }
 
+    /* 책자 바로가기 카드 */
     .catalog-card {
       display: block;
       background: #ffffff;
-      border-radius: 2px;
+      border-radius: 4px;
       overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: -4px 6px 15px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
       position: relative;
       z-index: 1;
+      border-left: 4px solid #38a1e8; /* 책 등 입체감 표현 */
     }
 
     .catalog-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: -6px 10px 22px rgba(0,0,0,0.22);
+    }
+
+    /* 바로가기 배지 스티커 */
+    .shortcut-badge {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: #38a1e8;
+      color: #ffffff;
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
 
     .catalog-img {
@@ -210,7 +232,7 @@
     }
 
     /* =========================
-       4파트 : LINKS (버섯 그림 & 클릭 버튼 디자인 반영)
+       4파트 : LINKS
     ========================= */
     .links {
       background: #ffffff;
@@ -241,7 +263,6 @@
       line-height: 1.1;
     }
 
-    /* 버섯 그림 */
     .mushroom-icon {
       width: 42px;
       height: 42px;
@@ -294,7 +315,6 @@
       margin-top: 6px;
     }
 
-    /* 시안 이미지 재현 클릭 버튼 */
     .click-btn {
       font-family: 'Gaegu', cursive;
       font-size: 20px;
@@ -316,7 +336,7 @@
     }
 
     /* =========================
-       5파트 : CONTACT (우산 이미지 & 명함 원본 로고 적용)
+       5파트 : CONTACT
     ========================= */
     .business {
       background: #b9d7f9;
@@ -337,14 +357,12 @@
       line-height: 1;
     }
 
-    /* 체크무늬 우산 이미지 */
     .umbrella-icon {
       width: 50px;
       height: 50px;
       object-fit: contain;
     }
 
-    /* 4파트와 동일한 손글씨 폰트로 수정 */
     .contact-sub {
       font-family: 'Gaegu', cursive;
       font-size: 19px;
@@ -381,7 +399,6 @@
       gap: 15px;
     }
 
-    /* 원본 JM JMEDI 로고 이미지 */
     .card-logo {
       width: 95px;
       flex-shrink: 0;
@@ -487,7 +504,7 @@
       <img class="top-illustration" src="top_illustration.png" alt="제이메디 일러스트" onerror="this.style.display='none'">
     </section>
 
-    <!-- 2파트 : CATALOG -->
+    <!-- 2파트 : CATALOG (오른쪽 책자 바로가기 적용) -->
     <section class="catalog">
       <div class="catalog-container">
         <div class="catalog-left">
@@ -496,10 +513,12 @@
           <div class="catalog-desc">2026 제이메디 카달로그 입니다.</div>
         </div>
 
+        <!-- 오른쪽 바로가기 책자 카달로그 영역 -->
         <div class="catalog-right">
           <div class="tape-decoration"></div>
-          <a class="catalog-card" href="2026_제이메디_카달로그.pdf" target="_blank" title="카달로그 PDF 열기">
-            <img class="catalog-img" src="2026 제이메디_카달로그.jpg" alt="2026 제이메디 카달로그" onerror="this.src='https://via.placeholder.com/220x310/e0f2fe/1e3a8a?text=JMEDI+2026+CATALOG'">
+          <a class="catalog-card" href="2026_제이메디_카달로그.pdf" target="_blank" title="카달로그 바로가기 (PDF 열기)">
+            <img class="catalog-img" src="2026 제이메디_카달로그.jpg" alt="2026 제이메디 카달로그 바로가기" onerror="this.src='https://via.placeholder.com/220x310/e0f2fe/1e3a8a?text=JMEDI+2026+CATALOG'">
+            <div class="shortcut-badge">바로가기 ➔</div>
           </a>
         </div>
       </div>
@@ -512,12 +531,11 @@
       이미지가 들어갈 공간
     </section>
 
-    <!-- 4파트 : LINKS (버섯 그림 추가) -->
+    <!-- 4파트 : LINKS -->
     <section class="links">
       <div class="site-label">ONLINE SITE</div>
       <div class="links-title-wrap">
         <div class="links-title">홈페이지 사이트</div>
-        <!-- 별무늬 버섯 이미지 -->
         <img class="mushroom-icon" src="mushroom.png" alt="버섯" onerror="this.style.display='none'">
       </div>
       <div class="links-sub">제이메디의 다양한 소식을 만나보세요!</div>
@@ -545,15 +563,13 @@
       </div>
     </section>
 
-    <!-- 5파트 : CONTACT (우산 이미지 및 명함 원본 로고 적용) -->
+    <!-- 5파트 : CONTACT -->
     <section class="business">
       <div class="contact-header">
         <div class="contact-title">CONTACT</div>
-        <!-- 체크무늬 우산 이미지 -->
         <img class="umbrella-icon" src="umbrella.png" alt="우산" onerror="this.style.display='none'">
       </div>
 
-      <!-- 손글씨 폰트 적용 -->
       <div class="contact-sub">연락처로 문의 주세요!</div>
 
       <div class="card-container">
@@ -566,7 +582,6 @@
         </div>
 
         <div class="card-content">
-          <!-- 명함 원본 로고 이미지 -->
           <div class="card-logo">
             <img src="jmedi_logo.png" alt="JM JMEDI" onerror="this.src='https://via.placeholder.com/95x65/ffffff/000000?text=JMEDI'">
           </div>
