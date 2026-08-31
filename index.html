@@ -38,7 +38,7 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
-    /* 1파트 : TOP (길이 축소 및 여백 제거) */
+    /* 1파트 : TOP */
     .top {
       position: relative;
       background-color: #dcebfe;
@@ -84,19 +84,22 @@
       color: #555555;
       line-height: 1.4;
       font-weight: 500;
-      margin-bottom: 12px;
+      margin-bottom: 20px;
     }
 
-    /* 우측 일러스트: 바닥 경계선에 밀착 */
+    /* 우측 일러스트 */
     .top-illust {
       position: absolute;
       right: 0;
       bottom: 0;
-      width: 230px;
-      height: auto;
+      top: 0;
+      height: 100%;
+      width: auto;
       z-index: 1;
       pointer-events: none;
       display: block;
+      object-fit: contain;
+      object-position: bottom right;
     }
 
     /* 2파트 : CATALOG */
@@ -148,7 +151,7 @@
       line-height: 1.4;
     }
 
-    /* 안내 문구 중앙 정렬 적용 */
+    /* 안내 문구 */
     .catalog-guide {
       font-size: 10px;
       font-weight: 700;
@@ -448,19 +451,35 @@
       word-break: keep-all;
     }
 
-    /* FOOTER */
-    footer {
-      background: #1e3a8a;
-      padding: 20px;
-      text-align: right;
+    /* 6파트 : KAKAO BANNER */
+    .kakao-banner {
+      background: #11508e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
     }
 
-    .footer-icon {
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      background: #facc15;
-      border-radius: 4px;
+    .kakao-banner:hover {
+      background: #0d4175;
+    }
+
+    .kakao-icon {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .kakao-text {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 15px;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+      word-break: keep-all;
     }
 
     @media (min-width: 600px) {
@@ -488,7 +507,7 @@
           의약품 도매상 제이메디 입니다.
         </div>
       </div>
-      <!-- 오른쪽 아래 우측 일러스트 -->
+      <!-- 우측 일러스트 -->
       <img src="./top_illust.png" alt="일러스트" class="top-illust">
     </section>
 
@@ -600,10 +619,11 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="footer-icon"></div>
-    </footer>
+    <!-- 6파트 : KAKAO BANNER -->
+    <a class="kakao-banner" href="https://pf.kakao.com/" target="_blank">
+      <img class="kakao-icon" src="./kakao_icon.png" alt="카카오톡 채널 아이콘">
+      <div class="kakao-text">카톡 상담 바로가기를 원하시면 여기를 클릭해주세요!</div>
+    </a>
 
   </main>
 
