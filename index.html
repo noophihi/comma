@@ -38,7 +38,7 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
-    /* 1파트 : TOP */
+    /* 1파트 : TOP (길이 축소 및 여백 제거) */
     .top {
       position: relative;
       background-color: #dcebfe;
@@ -49,7 +49,7 @@
         transparent 12px,
         transparent 24px
       );
-      padding: 30px 20px 0px;
+      padding: 24px 20px 0px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -71,9 +71,9 @@
     }
 
     .top-title {
-      margin-top: 15px;
+      margin-top: 10px;
       font-family: 'Black Han Sans', sans-serif;
-      font-size: 28px;
+      font-size: 26px;
       color: #4a8bf5;
       letter-spacing: -1px;
     }
@@ -84,15 +84,15 @@
       color: #555555;
       line-height: 1.4;
       font-weight: 500;
-      margin-bottom: 25px;
+      margin-bottom: 12px;
     }
 
-    /* 우측 일러스트: 아래선 바닥에 딱 맞추고 크기 키움 */
+    /* 우측 일러스트: 바닥 경계선에 밀착 */
     .top-illust {
       position: absolute;
       right: 0;
       bottom: 0;
-      width: 240px;
+      width: 230px;
       height: auto;
       z-index: 1;
       pointer-events: none;
@@ -148,6 +148,7 @@
       line-height: 1.4;
     }
 
+    /* 안내 문구 중앙 정렬 적용 */
     .catalog-guide {
       font-size: 10px;
       font-weight: 700;
@@ -155,6 +156,7 @@
       letter-spacing: -0.5px;
       line-height: 1.35;
       margin-bottom: 5px;
+      text-align: center;
     }
 
     .catalog-right {
@@ -396,7 +398,7 @@
 
     .card-logo img {
       width: 100%;
-      height auto;
+      height: auto;
       display: block;
       object-fit: contain;
     }
