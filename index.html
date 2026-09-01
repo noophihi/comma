@@ -39,7 +39,7 @@
     }
 
     /* ==========================================
-       1파트 : TOP (글/그림 아래쪽으로 이동 및 확대)
+       1파트 : TOP (원래 스타일 복원)
        ========================================== */
     .top {
       position: relative;
@@ -51,11 +51,11 @@
         #dbeaff 10px,
         #dbeaff 20px
       );
-      padding: 45px 16px 20px; /* 상단 여백을 늘려 내용 전체를 아래로 다운 */
-      min-height: 260px;       /* 1파트 전체 높이를 확장 */
+      padding: 24px 16px 18px;
+      min-height: 200px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end; /* 하단 기준으로 정렬 */
+      justify-content: space-between;
       box-sizing: border-box;
       overflow: hidden;
     }
@@ -64,8 +64,6 @@
       position: relative;
       z-index: 2;
       width: 55%;
-      margin-top: 15px; /* 내용 위치 추가 인하 */
-      margin-bottom: 5px;
     }
 
     .top-brand {
@@ -96,13 +94,12 @@
       letter-spacing: -0.4px;
     }
 
-    /* 오른쪽 꽉 차게 커진 이미지 (아래쪽에 맞춤) */
     .top-illust {
       position: absolute;
       right: -5px;
       bottom: 0;
-      height: 100%;
-      max-height: 240px; /* 높이 및 크기 확장 */
+      height: 95%;
+      max-height: 190px;
       width: auto;
       z-index: 1;
       pointer-events: none;
@@ -688,7 +685,7 @@
     <!-- 하단 안내 배너 -->
     <section class="bottom-notice-banner">
       <div class="notice-text-inline">
-        스티커 제작부터 부착, 세트구성, 키트제작까지 원하시는대로 제작 가능합니다!
+        스티커 제작 부터 부착, 세트구성, 키트제작까지 원하시는대로 제작 가능합니다!
       </div>
     </section>
 
