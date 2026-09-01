@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JMEDI</title>
 
-  <!-- Google Fonts: Abril Fatface(1파트 메인 로고용) 추가 로드 -->
+  <!-- Google Fonts: 원본과 일치하는 도톰한 로고 폰트(Ultra) 및 폰트 세트 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Black+Han+Sans&family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Ultra&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -39,66 +39,70 @@
     }
 
     /* ==========================================
-       1파트 : TOP (수정 반영)
+       1파트 : TOP (원본 디테일 완벽 복원)
        ========================================== */
     .top {
       position: relative;
       background-color: #dbeaff;
-      /* 원본 예시와 동일한 세로 스트라이프 패턴 */
+      /* 원본 규격 세로 스트라이프 */
       background-image: repeating-linear-gradient(
         90deg,
-        rgba(255, 255, 255, 0.8),
-        rgba(255, 255, 255, 0.8) 12px,
-        transparent 12px,
-        transparent 24px
+        #ffffff,
+        #ffffff 12px,
+        #dbeaff 12px,
+        #dbeaff 24px
       );
-      padding: 28px 20px 20px;
-      overflow: hidden;
+      padding: 30px 16px 18px;
+      min-height: 200px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 220px;
+      box-sizing: border-box;
     }
 
     .top-content {
       position: relative;
       z-index: 2;
-      max-width: 62%;
+      width: 60%;
     }
 
-    /* 원본 예시 이미지의 세리프 영문 폰트 적용 */
+    /* 원본 특유의 두껍고 세리프가 살아있는 로고 폰트 (Ultra) */
     .top-brand {
-      font-family: 'Abril Fatface', serif;
-      font-size: 64px;
+      font-family: 'Ultra', serif;
+      font-size: 58px;
       color: #4b5ec3;
-      letter-spacing: -1px;
+      letter-spacing: -0.5px;
       line-height: 0.9;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      transform: scaleY(1.05); /* 원본 고유의 도톰한 비율 조정 */
+      transform-origin: left top;
     }
 
     .top-title {
       font-family: 'Black Han Sans', sans-serif;
-      font-size: 28px;
+      font-size: 26px;
       color: #3893f0;
-      letter-spacing: -1px;
-      line-height: 1.1;
-      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin-bottom: 10px;
     }
 
     .top-sub {
       font-family: 'Noto Sans KR', sans-serif;
-      font-size: 13px;
+      font-size: 11.5px;
       color: #333333;
       line-height: 1.4;
       font-weight: 500;
+      letter-spacing: -0.3px;
     }
 
-    /* 일러스트 우측 및 바닥 밀착, 크기 원본 수준으로 확대 */
+    /* 일러스트를 우측 끝/바닥에 완벽히 채우고 크기를 시원하게 확대 */
     .top-illust {
       position: absolute;
-      right: -5px;
+      right: -2px;
       bottom: 0;
-      height: 92%;
+      height: 98%;
+      max-height: 195px;
       width: auto;
       z-index: 1;
       pointer-events: none;
@@ -342,7 +346,6 @@
     .btn-2 .c-1 { background: #4ec2f7; }
     .btn-2 .c-2 { background: #82daf8; }
 
-    /* 연한 파스텔 파랑 계열 */
     .btn-3 .c-1 { background: #60a5fa; }
     .btn-3 .c-2 { background: #bfdbfe; }
 
@@ -382,7 +385,6 @@
       margin-bottom: 25px;
     }
 
-    /* 명함 카드 */
     .card-container {
       position: relative;
       background: #ffffff;
@@ -514,7 +516,6 @@
       word-break: keep-all;
     }
 
-    /* 하단 안내 배너 */
     .bottom-notice-banner {
       background: #11508e;
       padding: 12px 10px;
@@ -545,7 +546,7 @@
 
   <main class="page">
 
-    <!-- 1파트 : TOP -->
+    <!-- 1파트 : TOP (수정 반영) -->
     <section class="top">
       <div class="top-content">
         <div class="top-brand">JMEDI</div>
@@ -637,7 +638,6 @@
 
       <div class="contact-sub">연락처로 문의 주세요!</div>
 
-      <!-- 명함 카드 -->
       <div class="card-container">
         <div class="color-bar">
           <span class="cb-1"></span>
