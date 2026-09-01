@@ -41,7 +41,7 @@
     /* 1파트 : TOP */
     .top {
       position: relative;
-      background-color: #dcebfe;
+      background-color: #e3edf9;
       background-image: repeating-linear-gradient(
         90deg,
         rgba(255, 255, 255, 0.75),
@@ -54,44 +54,44 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      min-height: 200px;
     }
 
     .top-content {
       position: relative;
       z-index: 2;
-      max-width: 60%;
+      max-width: 58%;
     }
 
     .top-brand {
       font-family: 'Gasoek One', sans-serif;
-      font-size: 52px;
-      color: #3b5cb8;
+      font-size: 54px;
+      color: #4b5ec3;
       letter-spacing: -1px;
       line-height: 1;
     }
 
     .top-title {
-      margin-top: 10px;
+      margin-top: 14px;
       font-family: 'Black Han Sans', sans-serif;
       font-size: 26px;
-      color: #4a8bf5;
+      color: #3893f0;
       letter-spacing: -1px;
     }
 
     .top-sub {
-      margin-top: 6px;
+      margin-top: 8px;
       font-size: 12px;
-      color: #555555;
-      line-height: 1.4;
+      color: #333333;
+      line-height: 1.45;
       font-weight: 500;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     .top-illust {
       position: absolute;
-      right: 0;
+      right: -10px;
       bottom: 0;
-      top: 0;
       height: 100%;
       width: auto;
       z-index: 1;
@@ -217,11 +217,14 @@
       align-items: flex-start;
     }
 
-    .banner-title {
+    .banner-label {
+      display: inline-block;
+      background: #fef08a;
       font-family: 'Black Han Sans', sans-serif;
-      font-size: 38px;
-      color: #1d5297;
-      line-height: 1.1;
+      font-size: 18px;
+      color: #38a1e8;
+      padding: 1px 6px;
+      letter-spacing: 0.5px;
     }
 
     /* 4파트 : LINKS */
@@ -338,15 +341,15 @@
 
     /* 5파트 : CONTACT */
     .business {
-      background: #a1cefc;
-      padding: 35px 20px 25px;
+      background: #b9d7f9;
+      padding: 40px 20px 25px;
     }
 
     .contact-header {
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     .contact-title {
@@ -362,19 +365,20 @@
       object-fit: contain;
     }
 
+    /* 4파트 소제목과 완전히 동일하게 원복 */
     .contact-sub {
-      font-family: 'Noto Sans KR', sans-serif;
-      font-size: 13px;
-      font-weight: 800;
+      font-family: 'Gaegu', cursive;
+      font-size: 19px;
+      font-weight: 700;
       color: #2b303a;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
-    /* 명함 카드 */
+    /* 명함 카드 원복 */
     .card-container {
       position: relative;
       background: #ffffff;
-      box-shadow: 4px 4px 0px rgba(11, 80, 147, 0.25);
+      box-shadow: 6px 6px 0px #8faed3;
       border-radius: 2px;
       overflow: hidden;
       margin-bottom: 18px;
@@ -396,12 +400,12 @@
     .card-content {
       display: flex;
       align-items: center;
-      padding: 20px 14px;
-      gap: 12px;
+      padding: 22px 16px;
+      gap: 15px;
     }
 
     .card-logo {
-      width: 90px;
+      width: 95px;
       flex-shrink: 0;
       display: flex;
       align-items: center;
@@ -423,7 +427,7 @@
       display: flex;
       align-items: baseline;
       gap: 6px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .name {
@@ -440,7 +444,7 @@
 
     .info-list {
       font-size: 11px;
-      line-height: 1.5;
+      line-height: 1.6;
       color: #222222;
     }
 
@@ -449,7 +453,7 @@
     }
 
     .info-label {
-      width: 48px;
+      width: 58px;
       font-weight: 700;
       color: #0b5093;
       flex-shrink: 0;
@@ -460,7 +464,7 @@
       word-break: keep-all;
     }
 
-    /* 카톡 문의 상자 (흰색 배경 + 파란 테두리) */
+    /* 흰색 배경 + 파란 테두리 카톡 문의 상자 */
     .kakao-inline-box {
       background: #ffffff;
       border: 2.5px solid #38a1e8;
@@ -503,7 +507,7 @@
       word-break: keep-all;
     }
 
-    /* 하단 파란색 안내 배너 영역 */
+    /* 하단 진한 파란색 배너 (원래 안내 문구 위치) */
     .bottom-notice-banner {
       background: #11508e;
       padding: 16px 15px;
@@ -571,7 +575,7 @@
 
     <!-- 3파트 : BANNER -->
     <section class="middle-banner">
-      <div class="banner-title">이 달의 소식</div>
+      <div class="banner-label">이 달의 소식</div>
     </section>
 
     <!-- 4파트 : LINKS -->
@@ -628,7 +632,7 @@
 
       <div class="contact-sub">연락처로 문의 주세요!</div>
 
-      <!-- 명함 카드 -->
+      <!-- 명함 카드 (주소 및 스타일 원래대로 복원) -->
       <div class="card-container">
         <div class="color-bar">
           <span class="cb-1"></span>
@@ -659,12 +663,8 @@
                 <span class="info-val">greencomma77@naver.com</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Site |</span>
-                <span class="info-val">greencommagift.com</span>
-              </div>
-              <div class="info-item">
                 <span class="info-label">Address |</span>
-                <span class="info-val">부산광역시 사상구 낙동대로839 제이메디 1층</span>
+                <span class="info-val">부산 사상구 낙동대로 839, 1층 제이메디</span>
               </div>
             </div>
           </div>
