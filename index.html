@@ -331,8 +331,9 @@
     .btn-2 .c-1 { background: #4ec2f7; }
     .btn-2 .c-2 { background: #82daf8; }
 
-    .btn-3 .c-1 { background: #3b82f6; }
-    .btn-3 .c-2 { background: #93c5fd; }
+    /* 4파트 제이헬스: 더 연하고 소프트한 파스텔 파랑 계열 */
+    .btn-3 .c-1 { background: #60a5fa; }
+    .btn-3 .c-2 { background: #bfdbfe; }
 
     /* 5파트 : CONTACT */
     .business {
@@ -408,7 +409,7 @@
 
     .card-logo img {
       width: 100%;
-      height auto;
+      height: auto;
       display: block;
       object-fit: contain;
     }
@@ -491,11 +492,12 @@
       color: #3c1e1e;
     }
 
+    /* 5파트 카톡상담 글씨 색상 변경 (#4b5563) */
     .kakao-inline-text {
       font-family: 'Noto Sans KR', sans-serif;
       font-size: 12px;
       font-weight: 700;
-      color: #111111;
+      color: #4b5563;
       letter-spacing: -0.3px;
       word-break: keep-all;
     }
@@ -503,18 +505,18 @@
     /* 하단 안내 배너 영역 */
     .bottom-notice-banner {
       background: #11508e;
-      padding: 14px 15px;
+      padding: 12px 10px;
       text-align: center;
     }
 
+    /* 한 줄에 들어가도록 폰트 크기와 자간/여백 축소 */
     .notice-text-inline {
       font-family: 'Gaegu', cursive;
       font-weight: 700;
-      font-size: 15px;
+      font-size: 13px;
       color: #ffffff;
-      letter-spacing: -0.2px;
-      word-break: keep-all;
-      line-height: 1.35;
+      letter-spacing: -0.5px;
+      white-space: nowrap;
     }
 
     @media (min-width: 600px) {
@@ -663,14 +665,14 @@
         </div>
       </div>
 
-      <!-- 흰색 카톡 문의 박스 -->
+      <!-- 흰색 카톡 문의 박스 (색상 변경 완료) -->
       <a class="kakao-inline-box" href="https://pf.kakao.com/_bVxgcn" target="_blank">
         <div class="kakao-icon-circle">Ch</div>
         <div class="kakao-inline-text">카톡 상담 바로가기를 원하시면 여기를 클릭해주세요!</div>
       </a>
     </section>
 
-    <!-- 하단 진한 파란색 안내 배너 -->
+    <!-- 하단 진한 파란색 안내 배너 (한 줄 처리 완료) -->
     <section class="bottom-notice-banner">
       <div class="notice-text-inline">
         스티커 제작 부터 부착, 세트구성, 키트제작까지 원하시는대로 제작 가능합니다!
