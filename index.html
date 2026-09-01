@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JMEDI</title>
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Ultra&display=swap" rel="stylesheet">
@@ -38,7 +39,7 @@
     }
 
     /* ==========================================
-       1파트 : TOP
+       1파트 : TOP (글/그림 아래쪽으로 이동 및 확대)
        ========================================== */
     .top {
       position: relative;
@@ -50,11 +51,11 @@
         #dbeaff 10px,
         #dbeaff 20px
       );
-      padding: 24px 16px 18px;
-      min-height: 200px;
+      padding: 45px 16px 20px; /* 상단 여백을 늘려 내용 전체를 아래로 다운 */
+      min-height: 260px;       /* 1파트 전체 높이를 확장 */
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-end; /* 하단 기준으로 정렬 */
       box-sizing: border-box;
       overflow: hidden;
     }
@@ -63,6 +64,8 @@
       position: relative;
       z-index: 2;
       width: 55%;
+      margin-top: 15px; /* 내용 위치 추가 인하 */
+      margin-bottom: 5px;
     }
 
     .top-brand {
@@ -93,12 +96,13 @@
       letter-spacing: -0.4px;
     }
 
+    /* 오른쪽 꽉 차게 커진 이미지 (아래쪽에 맞춤) */
     .top-illust {
       position: absolute;
       right: -5px;
       bottom: 0;
-      height: 95%;
-      max-height: 190px;
+      height: 100%;
+      max-height: 240px; /* 높이 및 크기 확장 */
       width: auto;
       z-index: 1;
       pointer-events: none;
@@ -344,7 +348,7 @@
     .btn-2 .c-1 { background: #4ec2f7; }
     .btn-2 .c-2 { background: #82daf8; }
 
-    /* JHEALTH 버튼: 지정 색상(#5aa7e1) 적용 */
+    /* JHEALTH 버튼 (#5aa7e1) */
     .btn-3 .c-1 { background: #5aa7e1; }
     .btn-3 .c-2 { background: #80c2f1; }
 
@@ -545,6 +549,7 @@
 
   <main class="page">
 
+    <!-- 1파트 : TOP -->
     <section class="top">
       <div class="top-content">
         <div class="top-brand">JMEDI</div>
@@ -557,6 +562,7 @@
       <img src="./top_illust.png" alt="일러스트" class="top-illust">
     </section>
 
+    <!-- 2파트 : CATALOG -->
     <section class="catalog">
       <div class="catalog-container">
         <div class="catalog-left">
@@ -576,10 +582,12 @@
       </div>
     </section>
 
+    <!-- 3파트 : BANNER -->
     <section class="middle-banner">
       <div class="banner-label">이 달의 소식</div>
     </section>
 
+    <!-- 4파트 : LINKS -->
     <section class="links">
       <div class="site-label">ONLINE SITE</div>
       <div class="links-title-wrap">
@@ -624,6 +632,7 @@
       </div>
     </section>
 
+    <!-- 5파트 : CONTACT -->
     <section class="business">
       <div class="contact-header">
         <div class="contact-title">CONTACT</div>
@@ -676,6 +685,7 @@
       </a>
     </section>
 
+    <!-- 하단 안내 배너 -->
     <section class="bottom-notice-banner">
       <div class="notice-text-inline">
         스티커 제작 부터 부착, 세트구성, 키트제작까지 원하시는대로 제작 가능합니다!
