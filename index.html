@@ -109,7 +109,7 @@
     }
 
     /* ==========================================
-       2파트 : CATALOG
+       2파트 : CATALOG (수정반영)
        ========================================== */
     .catalog {
       background: #eaeaea;
@@ -135,7 +135,7 @@
       padding-top: 0;
     }
 
-    /* 4파트 site-label과 동일한 스타일 적용 */
+    /* 노란 배너 속 CATALOG 원래대로 복구 */
     .catalog-label {
       display: inline-block;
       background: #fef08a;
@@ -144,6 +144,15 @@
       color: #38a1e8;
       padding: 1px 6px;
       letter-spacing: 0.5px;
+    }
+
+    /* 4파트 '홈페이지 사이트'와 동일한 폰트와 스타일의 큰 글씨 '책자' */
+    .catalog-title {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 38px;
+      color: #1d5297;
+      line-height: 1.1;
+      margin-top: 6px;
     }
 
     .catalog-guide {
@@ -336,7 +345,6 @@
     .btn-2 .c-1 { background: #4ec2f7; }
     .btn-2 .c-2 { background: #82daf8; }
 
-    /* 4파트 제이헬스 버튼 : 보라/인디고 계열로 변경 */
     .btn-3 .c-1 { background: #818cf8; }
     .btn-3 .c-2 { background: #c7d2fe; }
 
@@ -550,12 +558,13 @@
       <img src="./top_illust.png" alt="일러스트" class="top-illust">
     </section>
 
-    <!-- 2파트 : CATALOG (수정 반영) -->
+    <!-- 2파트 : CATALOG -->
     <section class="catalog">
       <div class="catalog-container">
         <div class="catalog-left">
           <div class="catalog-left-top">
-            <div class="catalog-label">책자</div>
+            <div class="catalog-label">CATALOG</div>
+            <div class="catalog-title">책자</div>
           </div>
           <div class="catalog-guide">[모바일 책자를 보시려면<br>우측의 사진을 클릭해주세요!]</div>
         </div>
