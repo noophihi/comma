@@ -88,7 +88,6 @@
       margin-bottom: 24px;
     }
 
-    /* 일러스트 크기 및 위치 상세 조절 */
     .top-illust {
       position: absolute;
       right: 0;
@@ -125,31 +124,18 @@
     }
 
     .catalog-left-top {
-      padding-top: 10px;
+      padding-top: 0;
     }
 
-    .catalog-tag {
-      font-family: 'Noto Sans KR', sans-serif;
-      font-weight: 900;
-      font-size: 17px;
-      color: #111;
-      line-height: 1.2;
-    }
-
-    .catalog-title {
+    /* 노란 배경의 태그 스타일 적용 */
+    .catalog-label {
+      display: inline-block;
+      background: #fef08a;
       font-family: 'Black Han Sans', sans-serif;
-      font-size: 34px;
-      color: #111;
-      line-height: 1;
-      margin-top: 2px;
-      margin-bottom: 14px;
-    }
-
-    .catalog-desc {
-      font-size: 11px;
-      color: #666;
-      font-weight: 500;
-      line-height: 1.4;
+      font-size: 18px;
+      color: #38a1e8;
+      padding: 1px 6px;
+      letter-spacing: 0.5px;
     }
 
     .catalog-guide {
@@ -332,16 +318,15 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.12);
     }
 
-    /* 버튼 컬러 지정 */
     .btn-1 .c-1 { background: #52a5f5; }
     .btn-1 .c-2 { background: #85c1f9; }
 
     .btn-2 .c-1 { background: #4ec2f7; }
     .btn-2 .c-2 { background: #82daf8; }
 
-    /* JHEALTH 전용 파란 계열 색상 (다른 두 버튼과 차별화) */
-    .btn-3 .c-1 { background: #2563eb; }
-    .btn-3 .c-2 { background: #60a5fa; }
+    /* 연하고 부드러운 블루 파스텔 톤 적용 */
+    .btn-3 .c-1 { background: #3b82f6; }
+    .btn-3 .c-2 { background: #93c5fd; }
 
     /* 5파트 : CONTACT */
     .business {
@@ -467,7 +452,6 @@
       word-break: keep-all;
     }
 
-    /* 흰색 카톡 문의 박스 */
     .kakao-inline-box {
       background: #ffffff;
       border: 2.5px solid #38a1e8;
@@ -501,7 +485,6 @@
       color: #3c1e1e;
     }
 
-    /* 4파트 '납품사례 블로그'와 동일한 폰트 (Noto Sans KR 700) 적용 */
     .kakao-inline-text {
       font-family: 'Noto Sans KR', sans-serif;
       font-size: 12px;
@@ -514,19 +497,19 @@
     /* 하단 안내 배너 영역 */
     .bottom-notice-banner {
       background: #11508e;
-      padding: 16px 15px;
+      padding: 14px 15px;
       text-align: center;
     }
 
-    /* '연락처로 문의 주세요'와 동일한 폰트 (Gaegu 700) 적용 */
+    /* 폰트 크기를 15px로 줄여 적용 */
     .notice-text-inline {
       font-family: 'Gaegu', cursive;
       font-weight: 700;
-      font-size: 19px;
+      font-size: 15px;
       color: #ffffff;
       letter-spacing: -0.2px;
       word-break: keep-all;
-      line-height: 1.3;
+      line-height: 1.35;
     }
 
     @media (min-width: 600px) {
@@ -557,14 +540,12 @@
       <img src="./top_illust.png" alt="일러스트" class="top-illust">
     </section>
 
-    <!-- 2파트 : CATALOG -->
+    <!-- 2파트 : CATALOG (노란 태그 스타일로 CATALOG만 표시) -->
     <section class="catalog">
       <div class="catalog-container">
         <div class="catalog-left">
           <div class="catalog-left-top">
-            <div class="catalog-tag">2026 JMEDI</div>
-            <div class="catalog-title">CATALOG</div>
-            <div class="catalog-desc">2026 제이메디 카달로그 입니다.</div>
+            <div class="catalog-label">CATALOG</div>
           </div>
           <div class="catalog-guide">[모바일 책자를 보시려면<br>우측의 사진을 클릭해주세요!]</div>
         </div>
@@ -676,14 +657,14 @@
         </div>
       </div>
 
-      <!-- 흰색 카톡 문의 박스 (폰트 변경 완료) -->
+      <!-- 흰색 카톡 문의 박스 -->
       <a class="kakao-inline-box" href="https://pf.kakao.com/_bVxgcn" target="_blank">
         <div class="kakao-icon-circle">Ch</div>
         <div class="kakao-inline-text">카톡 상담 바로가기를 원하시면 여기를 클릭해주세요!</div>
       </a>
     </section>
 
-    <!-- 하단 진한 파란색 안내 배너 (폰트 변경 완료) -->
+    <!-- 하단 진한 파란색 안내 배너 (글자 크기 축소 적용) -->
     <section class="bottom-notice-banner">
       <div class="notice-text-inline">
         스티커 제작 부터 부착, 세트구성, 키트제작까지 원하시는대로 제작 가능합니다!
