@@ -335,14 +335,13 @@
     .btn-2 .c-1 { background: #4ec2f7; }
     .btn-2 .c-2 { background: #82daf8; }
 
-    /* JHEALTH 버튼 스타일 (다른 톤의 블루) */
-    .btn-3 .c-1 { background: #3b82f6; }
-    .btn-3 .c-2 { background: #60a5fa; }
+    .btn-3 .c-1 { background: #38bdf8; }
+    .btn-3 .c-2 { background: #7dd3fc; }
 
     /* 5파트 : CONTACT */
     .business {
       background: #b9d7f9;
-      padding: 40px 20px 50px;
+      padding: 40px 20px 30px;
     }
 
     .contact-header {
@@ -379,6 +378,7 @@
       box-shadow: 6px 6px 0px #8faed3;
       border-radius: 2px;
       overflow: hidden;
+      margin-bottom: 16px;
     }
 
     .color-bar {
@@ -461,56 +461,52 @@
       word-break: keep-all;
     }
 
-    /* 6파트 : KAKAO BANNER */
-    .kakao-banner {
+    /* 5파트 내 카카오 박스 (컴팩트 크기) */
+    .kakao-inline-box {
       background: #11508e;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      padding: 14px 20px;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 6px;
       text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       transition: background-color 0.2s ease;
+      margin-bottom: 25px;
     }
 
-    .kakao-banner:hover {
+    .kakao-inline-box:hover {
       background: #0d4175;
     }
 
-    .kakao-icon {
-      width: 44px;
-      height: 44px;
+    .kakao-inline-icon {
+      width: 28px;
+      height: 28px;
       object-fit: contain;
       flex-shrink: 0;
     }
 
-    .kakao-text {
+    .kakao-inline-text {
       font-family: 'Noto Sans KR', sans-serif;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      color: #60a5fa;
-      letter-spacing: -0.5px;
+      color: #ffffff;
+      letter-spacing: -0.3px;
       word-break: keep-all;
     }
 
-    /* 7파트 : SERVICE ANNOUNCEMENT */
-    .notice-section {
-      background: #ffffff;
-      padding: 10px 16px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .notice-text {
+    /* 안내 문구 (파랑 배경 내 흰글씨) */
+    .notice-text-inline {
       font-family: 'Gaegu', cursive;
       font-weight: 700;
       font-size: 15px;
-      color: #1d5297;
+      color: #ffffff;
       letter-spacing: -0.3px;
       word-break: keep-all;
-      line-height: 1.2;
+      line-height: 1.3;
+      text-align: center;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.15);
     }
 
     @media (min-width: 600px) {
@@ -600,7 +596,7 @@
           </div>
         </a>
 
-        <!-- 추가된 JHEALTH 박스 -->
+        <!-- JHEALTH 박스 -->
         <a href="https://smartstore.naver.com/jhealth" class="link-box" target="_blank">
           <div class="link-info">
             <div class="link-title">JHEALTH</div>
@@ -660,17 +656,17 @@
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- 6파트 : KAKAO BANNER -->
-    <a class="kakao-banner" href="https://pf.kakao.com/_bVxgcn" target="_blank">
-      <img class="kakao-icon" src="./kakao_icon.png" alt="카카오톡 채널 아이콘">
-      <div class="kakao-text">빠른 카톡 문의를 원하시면 여기를 클릭해주세요!</div>
-    </a>
+      <!-- 5파트 내부로 이동한 카카오 문의 네모박스 -->
+      <a class="kakao-inline-box" href="https://pf.kakao.com/_bVxgcn" target="_blank">
+        <img class="kakao-inline-icon" src="./kakao_icon.png" alt="카카오톡 채널 아이콘">
+        <div class="kakao-inline-text">빠른 카톡 문의를 원하시면 여기를 클릭해주세요!</div>
+      </a>
 
-    <!-- 7파트 : SERVICE ANNOUNCEMENT -->
-    <section class="notice-section">
-      <div class="notice-text">스티커 제작 부터 부착, 세트구성, 키트제작까지 원하시는대로 제작 가능합니다!</div>
+      <!-- 5파트 내부로 올린 서비스 안내 문구 (흰 글씨) -->
+      <div class="notice-text-inline">
+        스티커 제작 부터 부착, 세트구성, 키트제작까지 원하시는대로 제작 가능합니다!
+      </div>
     </section>
 
   </main>
