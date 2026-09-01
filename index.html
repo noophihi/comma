@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JMEDI</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Abril Fatface(1파트 메인 로고용) 추가 로드 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu:wght@400;700&family=Gasoek+One&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Black+Han+Sans&family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -38,62 +38,67 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
-    /* 1파트 : TOP */
+    /* ==========================================
+       1파트 : TOP (수정 반영)
+       ========================================== */
     .top {
       position: relative;
-      background-color: #e3edf9;
+      background-color: #dbeaff;
+      /* 원본 예시와 동일한 세로 스트라이프 패턴 */
       background-image: repeating-linear-gradient(
         90deg,
-        rgba(255, 255, 255, 0.75),
-        rgba(255, 255, 255, 0.75) 12px,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8) 12px,
         transparent 12px,
         transparent 24px
       );
-      padding: 24px 20px 0px;
+      padding: 28px 20px 20px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 210px;
+      min-height: 220px;
     }
 
     .top-content {
       position: relative;
       z-index: 2;
-      max-width: 60%;
+      max-width: 62%;
     }
 
+    /* 원본 예시 이미지의 세리프 영문 폰트 적용 */
     .top-brand {
-      font-family: 'Gasoek One', sans-serif;
-      font-size: 54px;
+      font-family: 'Abril Fatface', serif;
+      font-size: 64px;
       color: #4b5ec3;
       letter-spacing: -1px;
-      line-height: 1;
+      line-height: 0.9;
+      margin-bottom: 12px;
     }
 
     .top-title {
-      margin-top: 14px;
       font-family: 'Black Han Sans', sans-serif;
-      font-size: 26px;
+      font-size: 28px;
       color: #3893f0;
       letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 12px;
     }
 
     .top-sub {
-      margin-top: 8px;
-      font-size: 12px;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 13px;
       color: #333333;
-      line-height: 1.45;
+      line-height: 1.4;
       font-weight: 500;
-      margin-bottom: 24px;
     }
 
+    /* 일러스트 우측 및 바닥 밀착, 크기 원본 수준으로 확대 */
     .top-illust {
       position: absolute;
-      right: 0;
+      right: -5px;
       bottom: 0;
-      height: 85%;
-      max-height: 180px;
+      height: 92%;
       width: auto;
       z-index: 1;
       pointer-events: none;
@@ -102,7 +107,9 @@
       object-position: bottom right;
     }
 
-    /* 2파트 : CATALOG */
+    /* ==========================================
+       2파트 : CATALOG
+       ========================================== */
     .catalog {
       background: #eaeaea;
       padding: 35px 16px 20px;
@@ -202,7 +209,9 @@
       display: block;
     }
 
-    /* 3파트 : BANNER */
+    /* ==========================================
+       3파트 : BANNER
+       ========================================== */
     .middle-banner {
       background: #cbe3fc;
       min-height: 200px;
@@ -222,7 +231,9 @@
       letter-spacing: 0.5px;
     }
 
-    /* 4파트 : LINKS */
+    /* ==========================================
+       4파트 : LINKS
+       ========================================== */
     .links {
       background: #ffffff;
       padding: 40px 20px 30px;
@@ -331,11 +342,13 @@
     .btn-2 .c-1 { background: #4ec2f7; }
     .btn-2 .c-2 { background: #82daf8; }
 
-    /* 4파트 제이헬스: 더 연하고 소프트한 파스텔 파랑 계열 */
+    /* 연한 파스텔 파랑 계열 */
     .btn-3 .c-1 { background: #60a5fa; }
     .btn-3 .c-2 { background: #bfdbfe; }
 
-    /* 5파트 : CONTACT */
+    /* ==========================================
+       5파트 : CONTACT
+       ========================================== */
     .business {
       background: #b9d7f9;
       padding: 40px 20px 25px;
@@ -492,7 +505,6 @@
       color: #3c1e1e;
     }
 
-    /* 5파트 카톡상담 글씨 색상 변경 (#4b5563) */
     .kakao-inline-text {
       font-family: 'Noto Sans KR', sans-serif;
       font-size: 12px;
@@ -502,14 +514,13 @@
       word-break: keep-all;
     }
 
-    /* 하단 안내 배너 영역 */
+    /* 하단 안내 배너 */
     .bottom-notice-banner {
       background: #11508e;
       padding: 12px 10px;
       text-align: center;
     }
 
-    /* 한 줄에 들어가도록 폰트 크기와 자간/여백 축소 */
     .notice-text-inline {
       font-family: 'Gaegu', cursive;
       font-weight: 700;
@@ -665,14 +676,13 @@
         </div>
       </div>
 
-      <!-- 흰색 카톡 문의 박스 (색상 변경 완료) -->
       <a class="kakao-inline-box" href="https://pf.kakao.com/_bVxgcn" target="_blank">
         <div class="kakao-icon-circle">Ch</div>
         <div class="kakao-inline-text">카톡 상담 바로가기를 원하시면 여기를 클릭해주세요!</div>
       </a>
     </section>
 
-    <!-- 하단 진한 파란색 안내 배너 (한 줄 처리 완료) -->
+    <!-- 하단 안내 배너 -->
     <section class="bottom-notice-banner">
       <div class="notice-text-inline">
         스티커 제작 부터 부착, 세트구성, 키트제작까지 원하시는대로 제작 가능합니다!
