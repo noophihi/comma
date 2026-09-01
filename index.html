@@ -54,13 +54,13 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 200px;
+      min-height: 210px;
     }
 
     .top-content {
       position: relative;
       z-index: 2;
-      max-width: 58%;
+      max-width: 60%;
     }
 
     .top-brand {
@@ -88,11 +88,13 @@
       margin-bottom: 24px;
     }
 
+    /* 일러스트 크기 및 위치 상세 조절 */
     .top-illust {
       position: absolute;
-      right: -10px;
+      right: 0;
       bottom: 0;
-      height: 100%;
+      height: 85%;
+      max-height: 180px;
       width: auto;
       z-index: 1;
       pointer-events: none;
@@ -330,14 +332,16 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.12);
     }
 
+    /* 버튼 컬러 지정 */
     .btn-1 .c-1 { background: #52a5f5; }
     .btn-1 .c-2 { background: #85c1f9; }
 
     .btn-2 .c-1 { background: #4ec2f7; }
     .btn-2 .c-2 { background: #82daf8; }
 
-    .btn-3 .c-1 { background: #38bdf8; }
-    .btn-3 .c-2 { background: #7dd3fc; }
+    /* JHEALTH 전용 파란 계열 색상 (다른 두 버튼과 차별화) */
+    .btn-3 .c-1 { background: #2563eb; }
+    .btn-3 .c-2 { background: #60a5fa; }
 
     /* 5파트 : CONTACT */
     .business {
@@ -365,7 +369,6 @@
       object-fit: contain;
     }
 
-    /* 4파트 소제목과 완전히 동일하게 원복 */
     .contact-sub {
       font-family: 'Gaegu', cursive;
       font-size: 19px;
@@ -374,7 +377,7 @@
       margin-bottom: 25px;
     }
 
-    /* 명함 카드 원복 */
+    /* 명함 카드 */
     .card-container {
       position: relative;
       background: #ffffff;
@@ -464,7 +467,7 @@
       word-break: keep-all;
     }
 
-    /* 흰색 배경 + 파란 테두리 카톡 문의 상자 */
+    /* 흰색 카톡 문의 박스 */
     .kakao-inline-box {
       background: #ffffff;
       border: 2.5px solid #38a1e8;
@@ -498,30 +501,32 @@
       color: #3c1e1e;
     }
 
+    /* 4파트 '납품사례 블로그'와 동일한 폰트 (Noto Sans KR 700) 적용 */
     .kakao-inline-text {
       font-family: 'Noto Sans KR', sans-serif;
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 700;
       color: #111111;
       letter-spacing: -0.3px;
       word-break: keep-all;
     }
 
-    /* 하단 진한 파란색 배너 (원래 안내 문구 위치) */
+    /* 하단 안내 배너 영역 */
     .bottom-notice-banner {
       background: #11508e;
       padding: 16px 15px;
       text-align: center;
     }
 
+    /* '연락처로 문의 주세요'와 동일한 폰트 (Gaegu 700) 적용 */
     .notice-text-inline {
-      font-family: 'Noto Sans KR', sans-serif;
-      font-weight: 900;
-      font-size: 13.5px;
+      font-family: 'Gaegu', cursive;
+      font-weight: 700;
+      font-size: 19px;
       color: #ffffff;
-      letter-spacing: -0.4px;
+      letter-spacing: -0.2px;
       word-break: keep-all;
-      line-height: 1.4;
+      line-height: 1.3;
     }
 
     @media (min-width: 600px) {
@@ -543,7 +548,7 @@
     <section class="top">
       <div class="top-content">
         <div class="top-brand">JMEDI</div>
-        <div class="top-title">2026 카달로그</div>
+        <div class="top-title">2026 제이메디</div>
         <div class="top-sub">
           안녕하세요!<br>
           의약품 도매상 제이메디 입니다.
@@ -632,7 +637,7 @@
 
       <div class="contact-sub">연락처로 문의 주세요!</div>
 
-      <!-- 명함 카드 (주소 및 스타일 원래대로 복원) -->
+      <!-- 명함 카드 -->
       <div class="card-container">
         <div class="color-bar">
           <span class="cb-1"></span>
@@ -671,14 +676,14 @@
         </div>
       </div>
 
-      <!-- 흰색 카톡 문의 박스 -->
+      <!-- 흰색 카톡 문의 박스 (폰트 변경 완료) -->
       <a class="kakao-inline-box" href="https://pf.kakao.com/_bVxgcn" target="_blank">
         <div class="kakao-icon-circle">Ch</div>
         <div class="kakao-inline-text">카톡 상담 바로가기를 원하시면 여기를 클릭해주세요!</div>
       </a>
     </section>
 
-    <!-- 하단 진한 파란색 안내 배너 -->
+    <!-- 하단 진한 파란색 안내 배너 (폰트 변경 완료) -->
     <section class="bottom-notice-banner">
       <div class="notice-text-inline">
         스티커 제작 부터 부착, 세트구성, 키트제작까지 원하시는대로 제작 가능합니다!
