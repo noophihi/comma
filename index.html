@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JMEDI</title>
 
-  <!-- Google Fonts: 원본과 일치하는 도톰한 로고 폰트(Ultra) 및 폰트 세트 -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Ultra&display=swap" rel="stylesheet">
@@ -39,12 +39,11 @@
     }
 
     /* ==========================================
-       1파트 : TOP (원본 디테일 완벽 복원)
+       1파트 : TOP
        ========================================== */
     .top {
       position: relative;
       background-color: #dbeaff;
-      /* 원본 규격 세로 스트라이프 */
       background-image: repeating-linear-gradient(
         90deg,
         #ffffff,
@@ -66,7 +65,6 @@
       width: 60%;
     }
 
-    /* 원본 특유의 두껍고 세리프가 살아있는 로고 폰트 (Ultra) */
     .top-brand {
       font-family: 'Ultra', serif;
       font-size: 58px;
@@ -74,7 +72,7 @@
       letter-spacing: -0.5px;
       line-height: 0.9;
       margin-bottom: 14px;
-      transform: scaleY(1.05); /* 원본 고유의 도톰한 비율 조정 */
+      transform: scaleY(1.05);
       transform-origin: left top;
     }
 
@@ -96,7 +94,6 @@
       letter-spacing: -0.3px;
     }
 
-    /* 일러스트를 우측 끝/바닥에 완벽히 채우고 크기를 시원하게 확대 */
     .top-illust {
       position: absolute;
       right: -2px;
@@ -138,6 +135,7 @@
       padding-top: 0;
     }
 
+    /* 4파트 site-label과 동일한 스타일 적용 */
     .catalog-label {
       display: inline-block;
       background: #fef08a;
@@ -146,14 +144,6 @@
       color: #38a1e8;
       padding: 1px 6px;
       letter-spacing: 0.5px;
-    }
-
-    .catalog-desc {
-      font-size: 11px;
-      color: #666;
-      font-weight: 500;
-      line-height: 1.4;
-      margin-top: 10px;
     }
 
     .catalog-guide {
@@ -346,8 +336,9 @@
     .btn-2 .c-1 { background: #4ec2f7; }
     .btn-2 .c-2 { background: #82daf8; }
 
-    .btn-3 .c-1 { background: #60a5fa; }
-    .btn-3 .c-2 { background: #bfdbfe; }
+    /* 4파트 제이헬스 버튼 : 보라/인디고 계열로 변경 */
+    .btn-3 .c-1 { background: #818cf8; }
+    .btn-3 .c-2 { background: #c7d2fe; }
 
     /* ==========================================
        5파트 : CONTACT
@@ -546,7 +537,7 @@
 
   <main class="page">
 
-    <!-- 1파트 : TOP (수정 반영) -->
+    <!-- 1파트 : TOP -->
     <section class="top">
       <div class="top-content">
         <div class="top-brand">JMEDI</div>
@@ -559,13 +550,12 @@
       <img src="./top_illust.png" alt="일러스트" class="top-illust">
     </section>
 
-    <!-- 2파트 : CATALOG -->
+    <!-- 2파트 : CATALOG (수정 반영) -->
     <section class="catalog">
       <div class="catalog-container">
         <div class="catalog-left">
           <div class="catalog-left-top">
-            <div class="catalog-label">CATALOG</div>
-            <div class="catalog-desc">2026 제이메디 카달로그 입니다.</div>
+            <div class="catalog-label">책자</div>
           </div>
           <div class="catalog-guide">[모바일 책자를 보시려면<br>우측의 사진을 클릭해주세요!]</div>
         </div>
