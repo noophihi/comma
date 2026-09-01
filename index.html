@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JMEDI</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Ultra&display=swap" rel="stylesheet">
@@ -39,7 +38,7 @@
     }
 
     /* ==========================================
-       1파트 : TOP
+       1파트 : TOP (수정 반영)
        ========================================== */
     .top {
       position: relative;
@@ -47,59 +46,55 @@
       background-image: repeating-linear-gradient(
         90deg,
         #ffffff,
-        #ffffff 12px,
-        #dbeaff 12px,
-        #dbeaff 24px
+        #ffffff 10px,
+        #dbeaff 10px,
+        #dbeaff 20px
       );
-      padding: 30px 16px 18px;
-      min-height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      padding: 24px 18px 0px;
+      height: 185px;
       box-sizing: border-box;
+      overflow: hidden;
     }
 
     .top-content {
       position: relative;
       z-index: 2;
-      width: 60%;
+      width: 62%;
     }
 
     .top-brand {
       font-family: 'Ultra', serif;
-      font-size: 58px;
-      color: #4b5ec3;
-      letter-spacing: -0.5px;
-      line-height: 0.9;
-      margin-bottom: 14px;
-      transform: scaleY(1.05);
-      transform-origin: left top;
+      font-size: 52px;
+      color: #4c5fc7;
+      letter-spacing: -1px;
+      line-height: 0.85;
+      margin-bottom: 12px;
+      display: block;
     }
 
     .top-title {
       font-family: 'Black Han Sans', sans-serif;
-      font-size: 26px;
+      font-size: 28px;
       color: #3893f0;
       letter-spacing: -0.5px;
       line-height: 1;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .top-sub {
       font-family: 'Noto Sans KR', sans-serif;
-      font-size: 11.5px;
+      font-size: 11px;
       color: #333333;
-      line-height: 1.4;
+      line-height: 1.35;
       font-weight: 500;
-      letter-spacing: -0.3px;
+      letter-spacing: -0.4px;
     }
 
     .top-illust {
       position: absolute;
-      right: -2px;
+      right: 0;
       bottom: 0;
-      height: 98%;
-      max-height: 195px;
+      height: 145px;
       width: auto;
       z-index: 1;
       pointer-events: none;
@@ -109,7 +104,7 @@
     }
 
     /* ==========================================
-       2파트 : CATALOG (수정반영)
+       2파트 : CATALOG
        ========================================== */
     .catalog {
       background: #eaeaea;
@@ -135,7 +130,6 @@
       padding-top: 0;
     }
 
-    /* 노란 배너 속 CATALOG 원래대로 복구 */
     .catalog-label {
       display: inline-block;
       background: #fef08a;
@@ -146,7 +140,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* 4파트 '홈페이지 사이트'와 동일한 폰트와 스타일의 큰 글씨 '책자' */
     .catalog-title {
       font-family: 'Black Han Sans', sans-serif;
       font-size: 38px;
@@ -545,7 +538,6 @@
 
   <main class="page">
 
-    <!-- 1파트 : TOP -->
     <section class="top">
       <div class="top-content">
         <div class="top-brand">JMEDI</div>
@@ -558,7 +550,6 @@
       <img src="./top_illust.png" alt="일러스트" class="top-illust">
     </section>
 
-    <!-- 2파트 : CATALOG -->
     <section class="catalog">
       <div class="catalog-container">
         <div class="catalog-left">
@@ -578,12 +569,10 @@
       </div>
     </section>
 
-    <!-- 3파트 : BANNER -->
     <section class="middle-banner">
       <div class="banner-label">이 달의 소식</div>
     </section>
 
-    <!-- 4파트 : LINKS -->
     <section class="links">
       <div class="site-label">ONLINE SITE</div>
       <div class="links-title-wrap">
@@ -628,7 +617,6 @@
       </div>
     </section>
 
-    <!-- 5파트 : CONTACT -->
     <section class="business">
       <div class="contact-header">
         <div class="contact-title">CONTACT</div>
@@ -681,7 +669,6 @@
       </a>
     </section>
 
-    <!-- 하단 안내 배너 -->
     <section class="bottom-notice-banner">
       <div class="notice-text-inline">
         스티커 제작 부터 부착, 세트구성, 키트제작까지 원하시는대로 제작 가능합니다!
