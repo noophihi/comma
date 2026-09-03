@@ -255,12 +255,31 @@
     }
 
     .banner-main-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .banner-main-title span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #3893f0;
+      color: #ffffff;
       font-family: 'Black Han Sans', sans-serif;
-      font-size: 22px;
-      color: #1e3a8a;
-      letter-spacing: -0.3px;
-      line-height: 1.2;
-      margin-bottom: 6px;
+      font-size: 17px;
+      box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15), 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .banner-main-title span.point {
+      background: #1d5297;
     }
 
     .banner-sub-title {
@@ -632,7 +651,15 @@
       </div>
 
       <div class="banner-card">
-        <div class="banner-main-title">매일 매일 시리즈</div>
+        <div class="banner-main-title">
+          <span class="point">매</span>
+          <span class="point">일</span>
+          <span class="point">매</span>
+          <span class="point">일</span>
+          <span>시</span>
+          <span>리</span>
+          <span>즈</span>
+        </div>
         <div class="banner-sub-title">혈압&항산화, 간, 혈행케어, 장, 혈행&기억력, 눈, 뼈건강, 혈당관리</div>
         <img class="banner-img" src="./banner_img.png" alt="매일 매일 시리즈 제품 라인업">
       </div>
