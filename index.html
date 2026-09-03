@@ -214,11 +214,19 @@
        ========================================== */
     .middle-banner {
       background: #cbe3fc;
-      min-height: 200px;
-      padding: 30px 20px;
+      padding: 24px 16px 20px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      position: relative;
+    }
+
+    .banner-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 12px;
     }
 
     .banner-label {
@@ -229,6 +237,53 @@
       color: #38a1e8;
       padding: 1px 6px;
       letter-spacing: 0.5px;
+    }
+
+    .banner-logo {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 900;
+      font-size: 18px;
+      color: #3893f0;
+      letter-spacing: -0.5px;
+    }
+
+    .banner-logo span {
+      color: #ff4747;
+    }
+
+    .banner-card {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 16px 12px 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .banner-main-title {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 32px;
+      color: #0b62bf;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .banner-sub-title {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: #333333;
+      letter-spacing: -0.4px;
+      margin-bottom: 12px;
+      word-break: keep-all;
+    }
+
+    .banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
     }
 
     /* ==========================================
@@ -423,7 +478,7 @@
 
     .card-logo img {
       width: 100%;
-      height: auto;
+      height auto;
       display: block;
       object-fit: contain;
     }
@@ -577,7 +632,16 @@
     </section>
 
     <section class="middle-banner">
-      <div class="banner-label">이 달의 소식</div>
+      <div class="banner-header">
+        <div class="banner-label">이 달의 소식</div>
+        <div class="banner-logo">온<span>누리</span>Health</div>
+      </div>
+
+      <div class="banner-card">
+        <div class="banner-main-title">매일 매일 시리즈</div>
+        <div class="banner-sub-title">혈압&항산화, 간, 혈행케어, 장, 혈행&기억력, 눈, 뼈건강, 혈당관리</div>
+        <img class="banner-img" src="./banner_img.jpg" alt="매일 매일 시리즈 제품 라인업">
+      </div>
     </section>
 
     <section class="links">
